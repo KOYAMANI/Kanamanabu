@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import MainScreen from "../../components/MainScreen/MainScreen";
+import MainScreen from "../../../components/MainScreen/MainScreen";
 import { Button, Card, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { createNoteAction } from "../../actions/notesActions";
-import Loading from "../../components/Loading/Loading";
-import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import { createNoteAction } from "../../../actions/notesActions";
+import Loading from "../../../components/Loading/Loading";
+import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import ReactMarkdown from "react-markdown";
 import { useNavigate,} from "react-router-dom";
 

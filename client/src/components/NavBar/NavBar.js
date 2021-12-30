@@ -44,7 +44,7 @@ export const NavBar = () => {
                     navbarScroll 
                 >
                     <Nav.Link>
-                        <NavLink to = "/contents">Contents</NavLink>
+                        <NavLink to = "/quizcategory">Contents</NavLink>
                     </Nav.Link>
                     <CustomNavDropdown title={
                         <img src={

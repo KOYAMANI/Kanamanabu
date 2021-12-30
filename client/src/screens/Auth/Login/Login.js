@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate,} from "react-router-dom";
-import { loading, login } from "../../actions/userActions"
+import { loading, login } from "../../../actions/userActions"
 
 import { LoginContainer } from './Login.styles'
-import OnboardingScreen from '../../components/OnboardingScreen/OnboardingScreen'
-import Loading from "../../components/Loading/Loading";
-import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import OnboardingScreen from '../../../components/OnboardingScreen/OnboardingScreen'
+import Loading from "../../../components/Loading/Loading";
+import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import { 
   Form, 
   Button, 
@@ -28,7 +28,7 @@ const Login = ({}) => {
     useEffect(() => {
         // const userInfo = localStorage.getItem('userInfo')
           if (userInfo) {
-           history('/contents');
+           history('/quizcategory');
           }
       }, [userInfo, history]);
 

@@ -6,7 +6,7 @@ import {
     useDispatch, 
     useSelector 
 } from "react-redux";
-import MainScreen from '../../components/MainScreen/MainScreen'
+import MainScreen from '../../../components/MainScreen/MainScreen'
 import { 
     Accordion, 
     Badge, 
@@ -18,9 +18,9 @@ import {
     Link 
 } from "react-router-dom";
 import { TitleSpan } from './Notes.styles';
-import { deleteNoteAction, listNotes } from '../../actions/notesActions'
-import Loading from '../../components/Loading/Loading';
-import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import { deleteNoteAction, listNotes } from '../../../actions/notesActions'
+import Loading from '../../../components/Loading/Loading';
+import ErrorMessage from '../../../components/ErrorMessage/ErrorMessage';
 
 const Notes = () => {
     const dispatch = useDispatch();

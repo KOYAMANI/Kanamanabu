@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { register } from "../../actions/userActions"
+import { register } from "../../../actions/userActions"
 
-import MainScreen from '../../components/MainScreen/MainScreen'
+import MainScreen from '../../../components/MainScreen/MainScreen'
 import { 
     Form, 
     Button, 
@@ -10,9 +10,9 @@ import {
     Col } from "react-bootstrap";
 import { Link, useNavigate} from "react-router-dom";
 import { RegisterContainer } from './Register.styles';
-import Loading from "../../components/Loading/Loading";
-import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-import OnboardingScreen from "../../components/OnboardingScreen/OnboardingScreen";
+import Loading from "../../../components/Loading/Loading";
+import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
+import OnboardingScreen from "../../../components/OnboardingScreen/OnboardingScreen";
 
 const Register = () => {
 
