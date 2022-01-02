@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Container, Card, Button } from 'react-bootstrap';
 import { Link,useLocation } from 'react-router-dom'
 import MainScreen from "../../../components/MainScreen/MainScreen";
-import { Wrong, Selected } from "./QuizScreen.styles";
 
 
 const QuizScreen = () => {
@@ -11,7 +10,6 @@ const QuizScreen = () => {
 
     const { questions } = location.state;
     const { length } = location.state;
-
 
     const[currentQuestion, setCurrentQuestion] = useState(0);
     const[showScore, setShowScore] = useState(false);

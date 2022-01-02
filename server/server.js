@@ -1,5 +1,4 @@
 const express = require ('express');
-// const notes = require('./data/notes');
 const questions = require('./data/questions')
 const categories = require("./data/quizCategory");
 const achievements = require('./data/achievements')
@@ -19,18 +18,9 @@ app.get('/', (req,res)=> {
     res.send('API is running')
 });
 
-// app.get('/api/notes', (req,res)=> {
-//     res.json(notes)
-// });
-
-// app.get('/api/notes/:id', (req,res)=> {
-//     const note = notes.find((n)=> n._id == req.params.id)
-//     res.send(note)
-// });
-
 app.get('/api/questions/:category', (req, res) => {
     const question = questions.filter((question) => 
-    question.category == req.params.category)
+    question.category.main == req.params.category)
     res.send(question)
 })
 
@@ -52,3 +42,14 @@ app.use(errorHandler)
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, console.log(`server started on PORT ${PORT}`))
+
+
+
+// app.get('/api/notes', (req,res)=> {
+//     res.json(notes)
+// });
+
+// app.get('/api/notes/:id', (req,res)=> {
+//     const note = notes.find((n)=> n._id == req.params.id)
+//     res.send(note)
+// });

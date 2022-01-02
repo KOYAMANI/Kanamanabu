@@ -8,31 +8,33 @@ const QuizSelection = () => {
     const location = useLocation();
     const { title } = location.state;
     const { category } = location.state;
+    const { subcategory } = location.state;
 
     const[questions, setQuestions] = useState([]);
 
     const fetchQuestions = async()=>{
         const { data } = await axios.get(`/api/questions/${category}`);
-        setQuestions(data);
-        
+        setQuestions(data); 
     }
 
     useEffect(() => {
         fetchQuestions();       
-    }, [])
-
+    }, []);
 
     return (
         <MainScreen title = {title}>
-            <Container>                
+            <Container>
+            {subcategory?.map(i=>(                        
                 <Link
                     to='/quiz'
                     state={{ 
-                        questions: questions,
+                        questions: questions.filter((question) => 
+                        question.category.sub == i),
                         length: questions.length
                     }}>
-                        <Button>Start</Button>
+                        <Button>{i}</Button>
                 </Link>
+            )) }               
             </Container>
         </MainScreen>
     )

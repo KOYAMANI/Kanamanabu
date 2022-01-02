@@ -26,7 +26,8 @@ const QuizCategory = () => {
                             to='/quizselection'
                             state={{ 
                                 title: category.title,
-                                category: category.category
+                                category: category.category,
+                                subcategory: category.subcategory
                              }}>
                             {category.desc}
                         </Link>
