@@ -1,6 +1,6 @@
 const express = require ('express');
 // const notes = require('./data/notes');
-const quizes = require('./data/quizes')
+const questions = require('./data/questions')
 const categories = require("./data/quizCategory");
 const achievements = require('./data/achievements')
 const dotenv = require('dotenv').config();
@@ -28,9 +28,10 @@ app.get('/', (req,res)=> {
 //     res.send(note)
 // });
 
-app.get('/api/quizes/:category', (req, res) => {
-    const quiz = quizes.find((q)=> q.category == req.params.category)
-    res.send(quiz)
+app.get('/api/questions/:category', (req, res) => {
+    const question = questions.filter((question) => 
+    question.category == req.params.category)
+    res.send(question)
 })
 
 app.get('/api/achievements', (req, res) => {

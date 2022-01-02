@@ -52,6 +52,7 @@ export const NavBar = () => {
                             userInfo.pic:
                             icon
                         }
+                        alt='profile icon'
                     
                         width={45}
                         height={45} 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate,} from "react-router-dom";
-import { loading, login } from "../../../actions/userActions"
+import { login } from "../../../actions/userActions"
 
 import { LoginContainer } from './Login.styles'
 import OnboardingScreen from '../../../components/OnboardingScreen/OnboardingScreen'
@@ -13,7 +13,7 @@ import {
   Row, 
   Col } from "react-bootstrap";
 
-const Login = ({}) => {
+const Login = () => {
 
     const history = useNavigate();
 

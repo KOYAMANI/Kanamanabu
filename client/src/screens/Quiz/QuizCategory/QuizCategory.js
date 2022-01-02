@@ -24,7 +24,10 @@ const QuizCategory = () => {
                         <Col>
                         <Link
                             to='/quizselection'
-                            state={{ title: category.title }}>
+                            state={{ 
+                                title: category.title,
+                                category: category.category
+                             }}>
                             {category.desc}
                         </Link>
                     </Col>

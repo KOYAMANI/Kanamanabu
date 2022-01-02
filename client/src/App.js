@@ -15,7 +15,7 @@ import Contents from './screens/Contents/Contents'
 import EditProfile from './screens/EditProfile/EditProfile';
 import QuizCategory from './screens/Quiz/QuizCategory/QuizCategory';
 import QuizSelection from './screens/Quiz/QuizSelection/QuizSelection';
-
+import QuizScreen from './screens/Quiz/Quizes/QuizScreen';
 
 // import Landing from './screens/Landing/Landing';
 // import Notes from './screens/Notes/Notes';
@@ -36,11 +36,8 @@ const App = () =>(
 
       <Route path ='/quizcategory' element ={<QuizCategory />} />
       <Route path ='/quizselection' element ={<QuizSelection />} />
+      <Route path ='/quiz' element={<QuizScreen />} />
 
-
-
-
-        
       {/* <Route path ='/createnote' element ={<CreateNote />} />     
       <Route path ='/notes' element ={<Notes />} />
       <Route path ='/notes/:id' element ={<EditNote />} /> */}

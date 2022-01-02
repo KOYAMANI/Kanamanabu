@@ -4,7 +4,7 @@ import {
     useSelector 
 } from "react-redux";
 import axios from "axios";
-import { Badge, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { AccountHeading } from './Account.styles';
 import { Card, Col } from 'react-bootstrap'
 

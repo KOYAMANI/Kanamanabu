@@ -12,6 +12,9 @@ import {
     notesListReducer, 
     notesUpdateReducer
  } from './reducers/notesReducer';
+import { 
+    quizListReducer
+ } from './reducers/quizReducer';
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
@@ -21,6 +24,7 @@ const reducer = combineReducers({
     noteUpdate: notesUpdateReducer,
     noteDelete: noteDeleteReducer,
     userUpdate: userUpdateReducer,
+    quizList: quizListReducer,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
