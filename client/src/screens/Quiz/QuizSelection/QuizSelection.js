@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Container, Button } from 'react-bootstrap';
-import { Link, useLocation } from 'react-router-dom'
+import { Container, Col } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom'
 import MainScreen from '../../../components/MainScreen/MainScreen'
+import QuizSelectionCard from "../../../components/Quiz/QuizSelection/QuizSelectionCard";
 
 const QuizSelection = () => {
     const location = useLocation();
@@ -24,17 +25,14 @@ const QuizSelection = () => {
     return (
         <MainScreen title = {title}>
             <Container>
-            {subcategory?.map(i=>(                        
-                <Link
-                    to='/quiz'
-                    state={{ 
-                        questions: questions.filter((question) => 
-                        question.category.sub == i),
-                        length: questions.length
-                    }}>
-                        <Button>{i}</Button>
-                </Link>
-            )) }               
+            <Col>
+                {subcategory?.map(subcategory=>(                        
+                    <QuizSelectionCard 
+                        subcategory={subcategory} 
+                        questions={questions}
+                    />
+                )) }      
+            </Col>         
             </Container>
         </MainScreen>
     )
