@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import MainScreen from '../../../components/MainScreen/MainScreen'
 import { Box } from '@material-ui/core'
 import QuizCategoryCard from "../../../components/Quiz/QuizCategory/QuizCategoryCard/QuizCategoryCard";
+import QuizCategoryScreen from "../../../components/Quiz/QuizCategory/QuizCategoryScreen/QuizCategoryScreen";
 
 
 const QuizCategory = () => {
@@ -21,15 +22,13 @@ const QuizCategory = () => {
 
 
     return (
-        <MainScreen title = "Quiz Category">
-            <Container>
-            <Col>
+        <QuizCategoryScreen>
+            <Row>
                 {categories?.map(category=>(      
                     <QuizCategoryCard category={category} />                  
                 )) } 
-            </Col>
-            </Container>
-        </MainScreen>
+            </Row>
+        </QuizCategoryScreen>
         
     )
 }

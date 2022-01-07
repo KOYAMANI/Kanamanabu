@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-
-import background from '../../assets/background.png'
+import background from '../../assets/sakura.png'
 import { Row, } from 'react-bootstrap';
 
-export const Main = styled.div`
+export const OnboardingMain = styled.div`
     min-height: 93vh;
     display: flex;
     align-items: center;
@@ -12,7 +11,7 @@ export const Main = styled.div`
     background-image: url(${background});
 `
 
-export const IntroText = styled.div`
+export const OnboardingIntroText = styled.div`
     width: 100%;
     text-align: center;      
 `

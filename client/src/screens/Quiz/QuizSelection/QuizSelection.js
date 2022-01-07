@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Container, Col } from 'react-bootstrap';
+import { Container, Col} from 'react-bootstrap';
 import { useLocation } from 'react-router-dom'
 import MainScreen from '../../../components/MainScreen/MainScreen'
 import QuizSelectionCard from "../../../components/Quiz/QuizSelection/QuizSelectionCard";

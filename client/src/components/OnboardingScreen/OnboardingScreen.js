@@ -3,28 +3,28 @@ import {
     Container, 
 } from 'react-bootstrap';
 import { 
-    Main,
+    OnboardingMain,
     OnboardingTitle,
-    IntroText,
+    OnboardingIntroText,
     OnboardingContainer,
     OnboardingRow
  } from './OnboardingScreenElements'
 
 const OnboardingScreen = ({title, children}) => {
     return (
-        <Main>
+        <OnboardingMain>
         <Container>
             <OnboardingRow>
-                <IntroText>
+                <OnboardingIntroText>
                 <OnboardingTitle>{title}</OnboardingTitle>
                     <OnboardingContainer>
                         {children}
                         
                     </OnboardingContainer>
-                </IntroText>
+                </OnboardingIntroText>
             </OnboardingRow> 
         </Container>
-    </Main>
+    </OnboardingMain>
        
     )
 }
