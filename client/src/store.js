@@ -10,10 +10,11 @@ import {
     noteDeleteReducer,
     notesCreateReducer,
     notesListReducer, 
-    notesUpdateReducer
+    notesUpdateReducer,
  } from './reducers/notesReducer';
 import { 
-    quizListReducer
+    quizListReducer,
+    quizCategoryListReducer
  } from './reducers/quizReducer';
 
 const reducer = combineReducers({
@@ -25,6 +26,7 @@ const reducer = combineReducers({
     noteDelete: noteDeleteReducer,
     userUpdate: userUpdateReducer,
     quizList: quizListReducer,
+    categoryList: quizCategoryListReducer,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo')

@@ -1,29 +1,37 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Container, Row } from 'react-bootstrap'
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import QuizCategoryCard from "../../../components/Quiz/QuizCategory/QuizCategoryCard/QuizCategoryCard";
 import QuizCategoryScreen from "../../../components/Quiz/QuizCategory/QuizCategoryScreen/QuizCategoryScreen";
 import { QuizCategoryContainer, QuizCategoryWrapper } from "./QuizCategory.styles";
+import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
+import Loading from "../../../components/Loading/Loading";
+import {fetchCategories} from'../../../actions/quizActions';
 
 
 const QuizCategory = () => {
-    const[categories, setCategories] = useState([]);
+    const dispatch = useDispatch();
 
-    const fetchCategories = async()=>{
-        const { data } = await axios.get('/api/categories');
-        setCategories(data)
-    }
+    const categoryList = useSelector(state => state.categoryList);
+    const  { loading, categories, error} = categoryList;
 
     useEffect(() => {
-        fetchCategories();
-    }, [])
+        dispatch(fetchCategories());
+    }, [dispatch])
+
+    console.log(categories)
 
 
     return (
         <QuizCategoryScreen>
+            {error 
+            && <ErrorMessage variant='danger'>
+                {error}
+               </ErrorMessage>
+            }
+            {loading && <Loading/>}
             <QuizCategoryContainer>
                 {categories?.map(category=>(  
-                    <QuizCategoryWrapper>
+                    <QuizCategoryWrapper key={category._id}>               
                         <QuizCategoryCard category={category} /> 
                     </QuizCategoryWrapper>                
                 )) } 

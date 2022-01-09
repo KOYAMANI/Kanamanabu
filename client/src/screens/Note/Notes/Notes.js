@@ -1,11 +1,5 @@
-import {
-    React, 
-    useEffect,
-} from 'react'
-import { 
-    useDispatch, 
-    useSelector 
-} from "react-redux";
+import { React, useEffect,} from 'react'
+import { useDispatch, useSelector } from "react-redux";
 import MainScreen from '../../../components/MainScreen/MainScreen'
 import { 
     Accordion, 
@@ -13,10 +7,7 @@ import {
     Button, 
     Card 
 } from 'react-bootstrap';
-import { 
-    useNavigate,
-    Link 
-} from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import { TitleSpan } from './Notes.styles';
 import { deleteNoteAction, listNotes } from '../../../actions/notesActions'
 import Loading from '../../../components/Loading/Loading';
