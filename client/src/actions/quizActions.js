@@ -15,7 +15,7 @@ export const fetchCategories = () => async(dispatch, getState)=> {
       type: QUIZ_CATEGORY_LIST_REQUEST,
     });
 
-    const { data } = await axios.get('/api/categories');
+    const { data } = await axios.get(`/api/categories/`);
 
     dispatch({
       type: QUIZ_CATEGORY_LIST_SUCCESS,
@@ -34,33 +34,27 @@ export const fetchCategories = () => async(dispatch, getState)=> {
   }
 }
 
-export const fetchQuiz = (category) => async (dispatch, getState) => {
-    try {
-      dispatch({
-        type: QUIZ_LIST_REQUEST,
-      });
-  
-    //   const {
-    //     userLogin: { userInfo },
-    //   } = getState();
-  
-    
-    const { data } = await axios.get(`/api/questions/${category}`);
-    
-  
+export const fetchQuizList = (category, subcategory) => async (dispatch) => {
+  try {
     dispatch({
-        type: QUIZ_LIST_SUCCESS,
-        payload: data,
+      type: QUIZ_LIST_REQUEST,
     });
-      
-    } catch (error) {
-      const message =
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message;
-      dispatch({
-        type: QUIZ_LIST_FAIL,
-        payload: message,
-      });
-    }
-  };
+
+    const { data } = await axios.get(`/api/questions/${category}/${subcategory}`);
+
+    dispatch({
+      type: QUIZ_LIST_SUCCESS,
+      payload: data,
+    });
+
+  } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+    dispatch({
+      type: QUIZ_LIST_FAIL,
+      payload: message,
+    });
+  }
+}

@@ -14,7 +14,8 @@ import {
  } from './reducers/notesReducer';
 import { 
     quizListReducer,
-    quizCategoryListReducer
+    quizCategoryListReducer,
+    quizSubCategoryListReducer
  } from './reducers/quizReducer';
 
 const reducer = combineReducers({

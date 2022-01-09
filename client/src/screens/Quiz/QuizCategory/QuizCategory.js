@@ -5,7 +5,7 @@ import QuizCategoryScreen from "../../../components/Quiz/QuizCategory/QuizCatego
 import { QuizCategoryContainer, QuizCategoryWrapper } from "./QuizCategory.styles";
 import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../../components/Loading/Loading";
-import {fetchCategories} from'../../../actions/quizActions';
+import { fetchCategories } from'../../../actions/quizActions';
 
 
 const QuizCategory = () => {
