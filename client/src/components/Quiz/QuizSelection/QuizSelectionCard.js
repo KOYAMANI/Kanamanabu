@@ -4,7 +4,6 @@ import { Box } from '@material-ui/core';
 
 const QuizSelectionCard = ({subcategory}) => {
 
-
     return (
         <Box
             key={subcategory}
