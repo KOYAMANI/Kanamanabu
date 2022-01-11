@@ -1,4 +1,4 @@
-import { React, useState, useEffect  } from "react";
+import { React, useEffect  } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Grid,} from "@material-ui/core";
 import { Container, Card, Button } from 'react-bootstrap';
@@ -6,34 +6,13 @@ import { Link,useLocation,useNavigate } from 'react-router-dom'
 import MainScreen from "../../../components/MainScreen/MainScreen";
 import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../../components/Loading/Loading";
-import { fetchQuizList } from "../../../actions/quizActions";
+import { fetchQuizList, quizIndexIncrement } from "../../../actions/quizActions";
+import { updateScore } from "../../../actions/scoreActions";
 
 const QuizScreen = () => {
 
     const location = useLocation();
     const history = useNavigate();
-
-    const[currentQuestion, setCurrentQuestion] = useState(0);
-    const[showScore, setShowScore] = useState(false);
-    const[score, setScore] = useState(0);
-    const[selected, setSelected] = useState(false);
-
-    const handleAnswerClick = (answer, correct) => {
-        if(answer === correct){                      
-            setScore(score + 1)   
-        }
-        setSelected(true);
-    }
-
-    const handleNext = () => {
-        setSelected(false);
-        const nextQuestion = currentQuestion + 1;
-        if(nextQuestion < quizes.length){
-            setCurrentQuestion(nextQuestion);
-        } else {
-            setShowScore(true);
-        }   
-    }
 
     // Redux migration from here
     const dispatch = useDispatch();
@@ -44,10 +23,32 @@ const QuizScreen = () => {
     const quizList = useSelector(state => state.quizList);
     const { loading, quizes, error } = quizList;
 
+    const isShowScore = useSelector(state => state.isShowScore);
+    const { showScore } = isShowScore;
+
+    const currentScore = useSelector(state => state.currentScore);
+    const { score } = currentScore;
+
+    const isAnswerSelected = useSelector(state => state.isAnswerSelected);
+    const { answerSelected } = isAnswerSelected;
+
+    const currentQuiz = useSelector(state => state.currentQuiz);
+    const { currentQuizIndex } = currentQuiz;
+
     useEffect(() => {
         dispatch(fetchQuizList(category, subcategory));      
         if(!quizes) history('/quizcategory')       
     }, [dispatch, category, subcategory, history])
+
+    const handleAnswerClick = (score, answer, correct) => {
+        dispatch(updateScore(score, answer, correct))
+    }
+
+    const handleNext = () => {
+        dispatch(quizIndexIncrement(currentQuizIndex,quizes.length))
+    }
+
+    console.log(answerSelected)
 
     return (
         <MainScreen title={'Quiz screen'}>
@@ -71,24 +72,27 @@ const QuizScreen = () => {
             {quizes? (
                 <Card.Body >
                     <Card.Title style={{textAlign:'center'}}>
-                        <h1>{quizes[currentQuestion]?.question}</h1>
+                        <h1>{quizes[currentQuizIndex]?.question}</h1>
                     </Card.Title>
                     <Grid container spacing={1} justifyContent="flex-center">
-                    {quizes[currentQuestion]?.answers.map(answer=>(
+                    {quizes[currentQuizIndex]?.answers.map(answer=>(
                             <Grid item xs={6} >
                             <Button 
                                 style={
-                                    selected === true?
-                                        answer !== quizes[currentQuestion]?.correct ?
+                                    answerSelected === true?
+                                        answer !== quizes[currentQuizIndex]?.correct ?
                                         { backgroundColor: 'red'} :
                                         { backgroundColor: 'green'}
-                                    : { backgroundColor: 'grey'}
+                                    : { backgroundColor: 'grey' }
                                 } 
+                                disabled = {answerSelected}
                                 key={answer} 
                                 onClick={ 
                                 () => handleAnswerClick(
+                                    score,
                                     answer, 
-                                    quizes[currentQuestion]?.correct)}>
+                                    
+                                    quizes[currentQuizIndex]?.correct)}>
                                 {answer}
                             </Button>  
                             </Grid>
@@ -96,13 +100,11 @@ const QuizScreen = () => {
                     </Grid>
                 </Card.Body> 
                 ): 
-                <Card>
-                    <Card.Title style={{textAlign:'center'}}>
-                        <h1>Something went wrong :(</h1>
-                    </Card.Title>
-                </Card>
+                <ErrorMessage variant='danger'>
+                something went wrong :(
+                </ErrorMessage>
             }
-            {selected ? (
+            {answerSelected ? (
                 <Button onClick={handleNext}>Next</Button>
             ): null}           
         </Card>
@@ -112,3 +114,26 @@ const QuizScreen = () => {
 }
 
 export default QuizScreen
+
+
+// const handleNext = () => {
+//     setSelected(false);
+//     const nextQuestion = currentQuestion + 1;
+//     if(nextQuestion < quizes.length){
+//         setCurrentQuestion(nextQuestion);
+//     } else {
+//         setShowScore(true);
+//     }
+// }
+
+// const handleAnswerClick = (score, answer, correct) => {
+//     if(answer === correct){                      
+//         setScore(score + 1) 
+//     }
+//     setSelected(true);
+// }
+
+// const[currentQuestion, setCurrentQuestion] = useState(0);
+// const[showScore, setShowScore] = useState(false);
+// const[score, setScore] = useState(0);
+// const[selected, setSelected] = useState(false);

@@ -15,8 +15,10 @@ import {
 import { 
     quizListReducer,
     quizCategoryListReducer,
-    quizSubCategoryListReducer
+    quizAnswerSelectedReducer,
+    quizIndexIncrementReducer
  } from './reducers/quizReducer';
+import { scoreShowReducer, scoreUpdateReducer } from './reducers/scoreReducer';
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
@@ -28,6 +30,10 @@ const reducer = combineReducers({
     userUpdate: userUpdateReducer,
     quizList: quizListReducer,
     categoryList: quizCategoryListReducer,
+    isAnswerSelected: quizAnswerSelectedReducer,
+    currentQuiz: quizIndexIncrementReducer,
+    currentScore: scoreUpdateReducer, 
+    isShowScore: scoreShowReducer,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
