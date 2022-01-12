@@ -6,6 +6,7 @@ const dotenv = require('dotenv').config();
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
 const noteRoutes = require('./routes/noteRoutes');
+const quizRoutes = require('./routes/quizRoutes')
 const { errorHandler, notFound } = require('./middlewares/errorMiddleware');
 
 const app = express();
@@ -34,6 +35,7 @@ app.get('/api/categories', (req, res) => {
 
 app.use('/api/users', userRoutes)
 app.use('/api/notes', noteRoutes)
+app.use('/api/quizzes', quizRoutes)
 
 
 app.use(notFound)

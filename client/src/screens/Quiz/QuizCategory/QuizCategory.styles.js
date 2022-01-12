@@ -8,11 +8,9 @@ export const QuizCategoryContainer = styled(Container)`
     display: inline-block;
     inline: none;
     white-space: nowrap;
-  }
 `;
 
 export const QuizCategoryWrapper = styled.div`
     display: inline-block;
     float: none;
-  }
 `;
