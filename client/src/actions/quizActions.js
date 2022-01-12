@@ -16,7 +16,7 @@ import {
 } from "../constants/scoreConstants";
 
 
-export const fetchCategories = () => async(dispatch, getState)=> {
+export const fetchCategories = () => async(dispatch)=> {
   try {
     dispatch({
       type: QUIZ_CATEGORY_LIST_REQUEST,
@@ -53,9 +53,6 @@ export const fetchQuizList = (category, subcategory) => async (dispatch) => {
       type: QUIZ_LIST_SUCCESS,
       payload: data,
     });
-    // dispatch({
-    //   type: SCORE_HIDE,
-    // });
 
   } catch (error) {
     const message =
@@ -92,7 +89,6 @@ export const quizIndexIncrement = (currentQuizIndex, quizListLength, ) => async 
     dispatch({
       type: SCORE_SHOW,
     });
-    // setShowScore(true);
   }  
 
 }
