@@ -8,7 +8,7 @@ const userRoutes = require('./routes/userRoutes');
 const noteRoutes = require('./routes/noteRoutes');
 const quizRoutes = require('./routes/quizRoutes')
 const { errorHandler, notFound } = require('./middlewares/errorMiddleware');
-
+const path = require('path');
 const app = express();
 dotenv.config;
 
@@ -20,19 +20,19 @@ app.get('/', (req,res)=> {
 });
 
 app.get('/api/questions/:category', (req, res) => {
-    const filteredbyCategory = questions.filter((question) => 
+    const filteredByCategory = questions.filter((question) =>
     question.category.main == req.params.category)
-    res.send(filteredbyCategory)
+    res.send(filteredByCategory)
 })
 
 app.get('/api/questions/:category/:subcategory', (req, res) => {
-    const filteredbyCategory = questions.filter((question) => 
+    const filteredByCategory = questions.filter((question) =>
     question.category.main == req.params.category )
 
-    const filteredbySubCategory = filteredbyCategory.filter((question) => 
+    const filteredBySubCategory = filteredByCategory.filter((question) =>
     question.category.sub == req.params.subcategory )
 
-    res.send(filteredbySubCategory)
+    res.send(filteredBySubCategory)
 })
 
 app.get('/api/achievements', (req, res) => {
@@ -47,6 +47,25 @@ app.use('/api/users', userRoutes)
 app.use('/api/notes', noteRoutes)
 app.use('/api/quizzes', quizRoutes)
 
+// ------deployment------>>
+
+__dirname = path.resolve();
+if (process.env.NODE_ENV==="production"){
+    console.log('production env')
+    app.use(express.static(path.join(__dirname,"/client/build")));
+    app.get("*", (req, res) =>
+    res.sendFile(path.resolve(
+            __dirname, "client", "build", "index.html"
+        ))
+    );
+} else {
+    console.log('dev env')
+    app.get('/', (req,res)=> {
+        res.send('API is running')
+    });
+}
+
+// <<------deployment------
 
 app.use(notFound)
 app.use(errorHandler)
