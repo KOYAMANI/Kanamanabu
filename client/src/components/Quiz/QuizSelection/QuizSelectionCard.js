@@ -1,10 +1,12 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 
-const QuizSelectionCard = ({questions, subcategory}) => {
+
+const QuizSelectionCard = ({subcategory}) => {
+
     return (
         <Box
+            key={subcategory}
             sx={{
                 marginBottom: '15px',
                 width:500,
@@ -17,18 +19,7 @@ const QuizSelectionCard = ({questions, subcategory}) => {
             }}
             >
             <h1 style={{ textAlign: 'center', }}>
-                <Link
-                    to='/quiz'
-                    style={{
-                        textDecoration: 'none'
-                    }}
-                    state={{ 
-                        questions: questions.filter((question) => 
-                        question.category.sub == subcategory),
-                        length: questions.length
-                    }}>
-                       {subcategory}
-                </Link>
+                {subcategory}
             </h1>
         </Box>
     )
