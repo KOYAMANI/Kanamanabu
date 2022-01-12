@@ -19,9 +19,19 @@ app.get('/', (req,res)=> {
 });
 
 app.get('/api/questions/:category', (req, res) => {
-    const question = questions.filter((question) => 
+    const filteredbyCategory = questions.filter((question) => 
     question.category.main == req.params.category)
-    res.send(question)
+    res.send(filteredbyCategory)
+})
+
+app.get('/api/questions/:category/:subcategory', (req, res) => {
+    const filteredbyCategory = questions.filter((question) => 
+    question.category.main == req.params.category )
+
+    const filteredbySubCategory = filteredbyCategory.filter((question) => 
+    question.category.sub == req.params.subcategory )
+
+    res.send(filteredbySubCategory)
 })
 
 app.get('/api/achievements', (req, res) => {

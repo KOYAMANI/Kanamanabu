@@ -3,35 +3,96 @@ import {
     QUIZ_LIST_FAIL,
     QUIZ_LIST_REQUEST,
     QUIZ_LIST_SUCCESS,
-} from "../constants/quizesConstants";
+    QUIZ_CATEGORY_LIST_FAIL,
+    QUIZ_CATEGORY_LIST_REQUEST,
+    QUIZ_CATEGORY_LIST_SUCCESS,
+    QUIZ_ANSWER_DESELECTED,
+    QUIZ_INDEX_INCREMENT_FAIL,
+    QUIZ_INDEX_INCREMENT_REQUEST,
+    QUIZ_INDEX_INCREMENT_SUCCESS
+} from "../constants/quizConstants";
+import { 
+  SCORE_SHOW 
+} from "../constants/scoreConstants";
 
-export const fetchQuiz = (category) => async (dispatch, getState) => {
-    try {
-      dispatch({
-        type: QUIZ_LIST_REQUEST,
-      });
-  
-    //   const {
-    //     userLogin: { userInfo },
-    //   } = getState();
-  
-    
-    const { data } = await axios.get(`/api/questions/${category}`);
-    
-  
+
+export const fetchCategories = () => async(dispatch, getState)=> {
+  try {
     dispatch({
-        type: QUIZ_LIST_SUCCESS,
-        payload: data,
+      type: QUIZ_CATEGORY_LIST_REQUEST,
     });
-      
-    } catch (error) {
-      const message =
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message;
-      dispatch({
-        type: QUIZ_LIST_FAIL,
-        payload: message,
-      });
-    }
-  };
+
+    const { data } = await axios.get(`/api/categories/`);
+
+    dispatch({
+      type: QUIZ_CATEGORY_LIST_SUCCESS,
+      payload: data,
+    });
+
+  } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+    dispatch({
+      type: QUIZ_CATEGORY_LIST_FAIL,
+      payload: message,
+    });
+  }
+}
+
+export const fetchQuizList = (category, subcategory) => async (dispatch) => {
+  try {
+    dispatch({
+      type: QUIZ_LIST_REQUEST,
+    });
+
+    const { data } = await axios.get(`/api/questions/${category}/${subcategory}`);
+
+    dispatch({
+      type: QUIZ_LIST_SUCCESS,
+      payload: data,
+    });
+    // dispatch({
+    //   type: SCORE_HIDE,
+    // });
+
+  } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+    dispatch({
+      type: QUIZ_LIST_FAIL,
+      payload: message,
+    });
+  }
+}
+
+export const quizIndexIncrement = (currentQuizIndex, quizListLength, ) => async (dispatch) => {
+
+  dispatch({
+    type: QUIZ_INDEX_INCREMENT_REQUEST,
+  });
+
+  const nextQuizIndex = currentQuizIndex + 1;
+
+  if(nextQuizIndex < quizListLength){
+    dispatch({
+      type: QUIZ_INDEX_INCREMENT_SUCCESS,
+      payload: nextQuizIndex
+    });
+    dispatch({
+      type: QUIZ_ANSWER_DESELECTED,
+    });
+  } else {
+    dispatch({
+      type: QUIZ_INDEX_INCREMENT_FAIL,
+    });
+    dispatch({
+      type: SCORE_SHOW,
+    });
+    // setShowScore(true);
+  }  
+
+}
