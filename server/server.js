@@ -47,7 +47,6 @@ app.use('/api/quizzes', quizRoutes)
 
 __dirname = path.resolve();
 if (process.env.NODE_ENV==="production"){
-    console.log(__dirname)
     app.use(express.static(path.join(__dirname, "client", "build")));
     app.get("*", (req, res) =>
     res.sendFile(path.join(
@@ -55,7 +54,6 @@ if (process.env.NODE_ENV==="production"){
         ))
     );
 } else {
-    console.log('dev env')
     app.get('/', (req,res)=> {
         res.send('API is running')
     });
