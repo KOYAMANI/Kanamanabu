@@ -15,10 +15,6 @@ dotenv.config;
 connectDB();
 app.use(express.json());
 
-app.get('/', (req,res)=> {
-    res.send('API is running')
-});
-
 app.get('/api/questions/:category', (req, res) => {
     const filteredByCategory = questions.filter((question) =>
     question.category.main == req.params.category)
@@ -52,9 +48,9 @@ app.use('/api/quizzes', quizRoutes)
 __dirname = path.resolve();
 if (process.env.NODE_ENV==="production"){
     console.log(__dirname)
-    app.use(express.static(path.join(__dirname,"/client/build")));
+    app.use(express.static(path.join(__dirname, "client", "build")));
     app.get("*", (req, res) =>
-    res.sendFile(path.resolve(
+    res.sendFile(path.join(
             __dirname, "client", "build", "index.html"
         ))
     );
