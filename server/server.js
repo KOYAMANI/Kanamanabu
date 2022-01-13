@@ -20,9 +20,6 @@ app.get('/', (req,res)=> {
     res.send('API is running')
 });
 
-// app.get('/api/achievements', (req, res) => {
-//     res.json(achievements)
-// })
 
 app.get('/api/categories', (req, res) => {
     res.json(categories)
@@ -43,6 +40,10 @@ const PORT = process.env.PORT || 8000;
 app.listen(PORT, console.log(`server started on PORT ${PORT}`))
 
 
+// =====OLD APIS====
+// app.get('/api/achievements', (req, res) => {
+//     res.json(achievements)
+// })
 // app.get('/api/questions/:category', (req, res) => {
 //     const filteredbyCategory = questions.filter((question) =>
 //         question.category.main == req.params.category)

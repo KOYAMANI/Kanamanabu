@@ -9,6 +9,4 @@ router.post('/login', loginUser)
 router.route('/profile')
   .post(protect, updateUserProfile)
 
-
-
 module.exports = router;
