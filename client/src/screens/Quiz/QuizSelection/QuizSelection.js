@@ -17,6 +17,8 @@ const QuizSelection = () => {
             history('/quizcategory')       
     }, [title, category, subcategory, history])
 
+    console.log(subcategory)
+
     return (
         <MainScreen title = {title}>
             <Container>
