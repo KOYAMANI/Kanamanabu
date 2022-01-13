@@ -18,6 +18,9 @@ import {
     quizAnswerSelectedReducer,
     quizIndexIncrementReducer
  } from './reducers/quizReducer';
+import {
+    achievementListReducer
+} from "./reducers/achievementReducers";
 import { scoreShowReducer, scoreUpdateReducer } from './reducers/scoreReducer';
 
 const reducer = combineReducers({
@@ -34,6 +37,7 @@ const reducer = combineReducers({
     currentQuiz: quizIndexIncrementReducer,
     currentScore: scoreUpdateReducer, 
     isShowScore: scoreShowReducer,
+    achievementList: achievementListReducer,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo')

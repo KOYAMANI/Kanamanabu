@@ -6,7 +6,7 @@ const achievementSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    user: {
+    _id: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: "User",
@@ -17,6 +17,6 @@ const achievementSchema = mongoose.Schema(
   }
 );
 
-const Note = mongoose.model("Achievement", achievementSchema);
+const Achievement = mongoose.model("Achievement", achievementSchema);
 
 module.exports = Achievement;
