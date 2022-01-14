@@ -16,10 +16,6 @@ dotenv.config;
 connectDB();
 app.use(express.json());
 
-app.get('/api/categories', (req, res) => {
-    res.json(categories)
-})
-
 app.use('/api/users', userRoutes)
 app.use('/api/quizzes', quizRoutes)
 app.use('/api/achievements', achievementRoutes)
@@ -51,8 +47,12 @@ const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, console.log(`server started on PORT ${PORT}`))
 
+module.exports = app;
 
 // =====OLD APIS====
+// app.get('/api/categories', (req, res) => {
+//     res.json(categories)
+// })
 // app.get('/api/achievements', (req, res) => {
 //     res.json(achievements)
 // })

@@ -81,14 +81,14 @@ const updateUserProfile = asyncHandler(
             user.password = req.body.password
         }
 
-        const udpatedUser = await user.save();
+        const updatedUser = await user.save();
 
         res.json({
-            _id: udpatedUser._id,
-            name: udpatedUser.name,
-            email: udpatedUser.email,
-            pic: udpatedUser.pic,
-            token: generateToken(udpatedUser._id),
+            _id: updatedUser._id,
+            name: updatedUser.name,
+            email: updatedUser.email,
+            pic: updatedUser.pic,
+            token: generateToken(updatedUser._id),
         })
     } else{
         res.status(404);
