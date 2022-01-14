@@ -22,17 +22,22 @@ export const QuizCard = styled(Card)`
     justify-content: center;
     width: 300px;
     height: 250px;
-`
-
-export const QuizCardTitle = styled(Card.Title)`
-    text-align: center;
-`
-
-export const AnswerButton = styled.button`
-    border: none;
-    ${props => props.isSelected === false && `
     background-color: transparent;
-  `}
+    border: none;
+`
+
+export const QuizCardTitle = styled.h1`
+    text-align: center;
+    font: initial;
+    font-size: 75px;
+    color: white;
+`
+
+export const AnswerButton = styled(Button)`
+    border: none;
+    width: 80px;
+    height: 80px;
+    font-size: 25px;
 `
 
 export const Selected = styled.div`
@@ -45,5 +50,4 @@ export const Wrong= styled.div`
     background-color: rgb(233, 0, 0);
     color: white;
     box-shadow: 0 0 1px black;
-`;
-
+`

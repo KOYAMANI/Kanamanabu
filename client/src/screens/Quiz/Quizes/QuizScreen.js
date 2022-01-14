@@ -3,12 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Grid,} from "@material-ui/core";
 import { Container, Card, Button } from 'react-bootstrap';
 import { Link,useLocation,useNavigate } from 'react-router-dom'
-import MainScreen from "../../../components/MainScreen/MainScreen";
 import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../../components/Loading/Loading";
 import { fetchQuizList, quizIndexIncrement } from "../../../actions/quizActions";
 import { updateScore } from "../../../actions/scoreActions";
-import {QuizScreenMain, QuizCard, QuizCardTitle, ScoreSection} from "./QuizScreen.styles";
+import {QuizScreenMain, QuizCard, QuizCardTitle, ScoreSection, AnswerButton} from "./QuizScreen.styles";
 
 const QuizScreen = () => {
 
@@ -72,18 +71,20 @@ const QuizScreen = () => {
             {quizes? (
                 <Card.Body>
                     <QuizCardTitle>
-                        <h1>{quizes[currentQuizIndex]?.question}</h1>
+                        {quizes[currentQuizIndex]?.question}
                     </QuizCardTitle>
-                    <Grid container spacing={1} justifyContent="flex-center">
+                    <Grid container spacing={3} justifyContent="center">
                     {quizes[currentQuizIndex]?.answers.map(answer=>(
-                            <Grid item xs={6} >
-                            <Button
+                            <Grid item xs={6} md={6} sm={6} justifyContent={"center"}>
+
+                            <AnswerButton
+                                correct
                                 style={
                                     answerSelected === true?
                                         answer !== quizes[currentQuizIndex]?.correct ?
                                         { backgroundColor: 'red'} :
                                         { backgroundColor: 'green'}
-                                    : { border: "none",backgroundColor: 'grey' }
+                                    : { backgroundColor: 'black'}
                                 } 
                                 disabled = {answerSelected}
                                 key={answer} 
@@ -91,23 +92,24 @@ const QuizScreen = () => {
                                 () => handleAnswerClick(
                                     score,
                                     answer, 
-                                    
                                     quizes[currentQuizIndex]?.correct)}>
                                 {answer}
-                            </Button>
+                            </AnswerButton>
                             </Grid>
-                    ))} 
+                    ))}
                     </Grid>
-                </Card.Body> 
+                </Card.Body>
                 ): 
                 <ErrorMessage variant='danger'>
                 something went wrong :(
                 </ErrorMessage>
             }
             {answerSelected ? (
-                <Button onClick={handleNext}>Next</Button>
-            ): null}           
+                <button style={{borderRadius: "4px", border:"none", backgroundColor:"#555555", color:"#ffffff",fontSize:"23px"}}
+                        onClick={handleNext}>Continue</button>
+            ): null}
         </QuizCard>
+
         }
         </QuizScreenMain>
     )
