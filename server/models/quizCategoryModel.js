@@ -12,7 +12,7 @@ const quizCategorySchema = mongoose.Schema(
             required: true,
         },
         subcategory: {
-            type: String,
+            type: Array,
             required: true,
         },
         desc: {

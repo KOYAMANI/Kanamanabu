@@ -22,7 +22,7 @@ export const fetchCategories = () => async(dispatch)=> {
       type: QUIZ_CATEGORY_LIST_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/categories/`);
+    const { data } = await axios.get(`/api/quizzes/categories/`);
 
     dispatch({
       type: QUIZ_CATEGORY_LIST_SUCCESS,
@@ -47,7 +47,7 @@ export const fetchQuizList = (category, subcategory) => async (dispatch) => {
       type: QUIZ_LIST_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/questions/${category}/${subcategory}`);
+    const { data } = await axios.get(`/api/quizzes/${category}/${subcategory}`);
 
     dispatch({
       type: QUIZ_LIST_SUCCESS,
