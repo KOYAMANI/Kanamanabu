@@ -32,7 +32,7 @@ export const NavBar = () => {
         <Navbar bg="primary" expand="lg">
             <Container fluid>
                 <Navbar.Brand>
-                    <NavLink to = "/">kanamanabu</NavLink>
+                    <NavLink to = "/">Home</NavLink>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
@@ -75,7 +75,7 @@ export const NavBar = () => {
                 //if user is not logged in
                 <Nav>
                     <Nav.Link>
-                        <NavLink to = "/login">Login</NavLink>
+                        <NavLink to = "/">Login</NavLink>
                     </Nav.Link>
                 </Nav>
                 }
