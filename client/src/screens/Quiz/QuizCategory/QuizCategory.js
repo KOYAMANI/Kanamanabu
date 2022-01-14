@@ -20,7 +20,6 @@ const QuizCategory = () => {
 
     console.log(categories)
 
-
     return (
         <QuizCategoryScreen>
             {error 

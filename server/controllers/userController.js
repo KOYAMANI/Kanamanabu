@@ -1,6 +1,8 @@
 const asyncHandler = require('express-async-handler');
 const User = require('../models/userModel');
+const Achievement = require('../models/achievementModel');
 const generateToken = require('../utils/generateToken');
+const Note = require("../models/noteModel");
 
 
 const registerUser = asyncHandler(
@@ -96,5 +98,8 @@ const updateUserProfile = asyncHandler(
     }
  
 });
+
+
+
 
 module.exports = {registerUser, loginUser, updateUserProfile};
