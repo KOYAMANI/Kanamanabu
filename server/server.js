@@ -9,17 +9,12 @@ const noteRoutes = require('./routes/noteRoutes');
 const quizRoutes = require('./routes/quizRoutes');
 const achievementRoutes = require('./routes/achievementRoutes');
 const { errorHandler, notFound } = require('./middlewares/errorMiddleware');
-
+const path = require('path');
 const app = express();
 dotenv.config;
 
 connectDB();
 app.use(express.json());
-
-app.get('/', (req,res)=> {
-    res.send('API is running')
-});
-
 
 app.get('/api/categories', (req, res) => {
     res.json(categories)
@@ -31,6 +26,23 @@ app.use('/api/achievements', achievementRoutes)
 
 app.use('/api/notes', noteRoutes)
 
+// ------deployment------>>
+
+__dirname = path.resolve();
+if (process.env.NODE_ENV==="production"){
+    app.use(express.static(path.join(__dirname, "client", "build")));
+    app.get("*", (req, res) =>
+    res.sendFile(path.join(
+            __dirname, "client", "build", "index.html"
+        ))
+    );
+} else {
+    app.get('/', (req,res)=> {
+        res.send('API is running')
+    });
+}
+
+// <<------deployment------
 
 app.use(notFound)
 app.use(errorHandler)
