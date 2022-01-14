@@ -22,7 +22,6 @@ export const QuizCard = styled(Card)`
     justify-content: center;
     width: 300px;
     height: 250px;
-    background-color: transparent;
 `
 
 export const QuizCardTitle = styled(Card.Title)`
