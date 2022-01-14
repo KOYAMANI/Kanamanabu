@@ -13,6 +13,8 @@ import {
   Row, 
   Col } from "react-bootstrap";
 
+import LoginButton from "../../../components/HTMLInteractables/Button/Button";
+
 const Login = () => {
 
     const history = useNavigate();
@@ -74,10 +76,11 @@ const Login = () => {
               Don't have an account ? <Link to="/register">Register Here</Link>
             </Col>
           </Row>
+
+          <LoginButton></LoginButton>
         </LoginContainer>
         
       </OnboardingScreen>
     )
 }
-
 export default Login
