@@ -8,6 +8,7 @@ import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../../components/Loading/Loading";
 import { fetchQuizList, quizIndexIncrement } from "../../../actions/quizActions";
 import { updateScore } from "../../../actions/scoreActions";
+import {QuizScreenMain, QuizCard, QuizCardTitle, ScoreSection} from "./QuizScreen.styles";
 
 const QuizScreen = () => {
 
@@ -51,7 +52,7 @@ const QuizScreen = () => {
     console.log(answerSelected)
 
     return (
-        <MainScreen title={'Quiz screen'}>
+        <QuizScreenMain>
         {error 
             && <ErrorMessage variant='danger'>
                 {error}
@@ -60,30 +61,29 @@ const QuizScreen = () => {
         {loading && <Loading/>}
          
         {showScore ? (
-            <Container>
+            <ScoreSection>
                 <p> You scored {score} out of {quizes.length}</p>
                 <Link to="/quizcategory">Done</Link>
-            </Container>           
+            </ScoreSection>
         ) : 
-        // TODO move below to the QuizCard component 
-        // <h1>{`Question ${currentQuestion + 1} / ${quizes.length}`}</h1>
-                     
-        <Card style={{alignItems: 'center', justifyContent:'center', width:'300px'}}>
+        // TODO move below to the QuizCard component
+        // <h1>{`Question ${currentQuizIndex + 1} / ${quizes.length}`}</h1>
+        <QuizCard>
             {quizes? (
-                <Card.Body >
-                    <Card.Title style={{textAlign:'center'}}>
+                <Card.Body>
+                    <QuizCardTitle>
                         <h1>{quizes[currentQuizIndex]?.question}</h1>
-                    </Card.Title>
+                    </QuizCardTitle>
                     <Grid container spacing={1} justifyContent="flex-center">
                     {quizes[currentQuizIndex]?.answers.map(answer=>(
                             <Grid item xs={6} >
-                            <Button 
+                            <Button
                                 style={
                                     answerSelected === true?
                                         answer !== quizes[currentQuizIndex]?.correct ?
                                         { backgroundColor: 'red'} :
                                         { backgroundColor: 'green'}
-                                    : { backgroundColor: 'grey' }
+                                    : { border: "none",backgroundColor: 'grey' }
                                 } 
                                 disabled = {answerSelected}
                                 key={answer} 
@@ -94,7 +94,7 @@ const QuizScreen = () => {
                                     
                                     quizes[currentQuizIndex]?.correct)}>
                                 {answer}
-                            </Button>  
+                            </Button>
                             </Grid>
                     ))} 
                     </Grid>
@@ -107,9 +107,9 @@ const QuizScreen = () => {
             {answerSelected ? (
                 <Button onClick={handleNext}>Next</Button>
             ): null}           
-        </Card>
-        }           
-        </MainScreen>
+        </QuizCard>
+        }
+        </QuizScreenMain>
     )
 }
 
