@@ -77,7 +77,7 @@ const Login = () => {
             </Col>
           </Row>
 
-          <LoginButton></LoginButton>
+          <LoginButton text="test"></LoginButton>
         </LoginContainer>
         
       </OnboardingScreen>

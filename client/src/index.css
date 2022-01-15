@@ -12,6 +12,7 @@ code {
     monospace;
 }
 
+/* TODO change later */
 :root {
   --actionColor: darkred;
   --white: white;
@@ -20,3 +21,4 @@ code {
   --mainColor: transparent;
   --secondaryColor: var(--white);
 }
+/* TODO End */

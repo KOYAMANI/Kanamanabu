@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./Button.module.css";
-function LoginButton(text){
+
+function LoginButton(props){
     return (
         <button className={styles.button}>
-            test
+            {props.text}
         </button>
     )
 }
