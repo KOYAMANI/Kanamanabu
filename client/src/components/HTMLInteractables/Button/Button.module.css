@@ -4,14 +4,14 @@
 
 .button {
     --height: 3rem;
-    --mainColor: black  ;
+    --mainColor: #393939;
     --secondaryColor: white;
 
 
     height: var(--height);
 
     color: var(--secondaryColor);
-    border: 3px solid var(--secondaryColor);
+    border: 1px solid #404040;
     background: var(--mainColor);
 
     display: flex;
