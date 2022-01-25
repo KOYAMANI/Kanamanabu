@@ -7,13 +7,6 @@ const addAchievement = asyncHandler(
         const { title } = req.body;
         const user = await User.findById(req.user._id);
 
-        // const achievementExists = await Achievement.findOne({title});
-        //
-        // if(achievementExists){
-        //     res.status(400);
-        //     throw new Error('User already have the achievement')
-        // }
-
         const achievement = await Achievement.create({
             title : title,
             _id: req.user._id

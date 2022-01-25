@@ -97,7 +97,21 @@ const updateUserProfile = asyncHandler(
  
 });
 
+const deleteUser = asyncHandler(
+    async(req, res, next) => {
+        const { email } = req.body;
 
+        const user = await User.findOne({email});
 
+        if(user){
+            await user.deleteOne();
+            res.status(200).json({
+                _id: user._id,
+            });
+        } else{
+            res.status(404);
+            throw new Error("User not found")
+        }
+    });
 
-module.exports = {registerUser, loginUser, updateUserProfile};
+module.exports = {registerUser, loginUser, updateUserProfile, deleteUser};

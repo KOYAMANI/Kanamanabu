@@ -96,6 +96,20 @@ describe("POST /api/users", () =>{
         expect(res.statusCode).toBe(401)
     });
 
+    test("User delete fail; User not found", async () => {
+        const res = await request(app).delete("/api/users/delete").send({
+            email : 'CannotDelete@email.com',
+        })
+        expect(res.statusCode).toBe(404)
+    });
+
+    test("User delete success", async () => {
+        const res = await request(app).delete("/api/users/delete").send({
+            email : `${rand}@test.com`,
+        })
+        expect(res.statusCode).toBe(200)
+    });
+
 })
 
 describe("GET /api/quizzes", () =>{
