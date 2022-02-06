@@ -6,7 +6,7 @@ function SignInPage() {
 
 
     return (
-        <div>
+        <div className={styles.main}>
             <DoubleForm />
         </div>
     )

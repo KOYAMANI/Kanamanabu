@@ -5,6 +5,9 @@
     width: 50%;
     height: 50vh;
     background: #333333;
+    /* left: 0; */
+    z-index: 2;
+
   }
   
 .Heading {
@@ -14,8 +17,11 @@
   
 .Right {
     right: 0;
+    /* transform: translate(100%); */
   }
   
 .Left {
-    left: 0;
+  left: 0;
+  /* transform: translate(-100%); */
   }
+
