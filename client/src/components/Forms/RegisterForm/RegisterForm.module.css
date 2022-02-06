@@ -1,0 +1,17 @@
+.main {
+    border: 1px solid red;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    width: 50%;
+    height: 50vh;
+    background: #ececec;
+}
+  
+.Heading {
+    margin: 0;
+    color: #333333;
+    position: absolute;
+    border: red 1px solid;
+}
+  

@@ -1,0 +1,21 @@
+.main {
+    position: absolute;
+    border: 1px solid red;
+    box-sizing: border-box;
+    width: 50%;
+    height: 50vh;
+    background: #333333;
+  }
+  
+.Heading {
+    margin: 0;
+    color: white;
+  }
+  
+.Right {
+    right: 0;
+  }
+  
+.Left {
+    left: 0;
+  }

@@ -2,34 +2,19 @@
     box-sizing: border-box;
 }
 
-.button {
-    --height: 3rem;
-    --mainColor: #393939;
-    --secondaryColor: white;
-
-
-    height: var(--height);
-
-    color: var(--secondaryColor);
-    border: 1px solid #404040;
-    background: var(--mainColor);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.Button {
+    box-sizing: border-box;
+    height: 3rem;  
+    width: 16rem;
+    border: 1px solid #333333;
+    border-radius: 2px;
+    background: #333333;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+  
+  .Button:hover {
+    background: #222;
     cursor: pointer;
-
-    border-radius: 3px;
-
-    font-size: calc(var(--height) / 3);
-}
-.button.short {
-    padding: 0 3rem;
-}
-.button.long {
-    height: 100%;
-}
-.button.pill {
-    border-radius: calc(var(--height) / 2);
-}
+  }

@@ -16,6 +16,7 @@ import EditProfile from './screens/EditProfile/EditProfile';
 import QuizCategory from './screens/Quiz/QuizCategory/QuizCategory';
 import QuizSelection from './screens/Quiz/QuizSelection/QuizSelection';
 import QuizScreen from './screens/Quiz/Quizes/QuizScreen';
+import SignInPage from "./screens/Auth/SignInPage/SignInPage";
 
 
 const App = () =>(
@@ -32,6 +33,7 @@ const App = () =>(
       <Route path ='/quizcategory' element ={<QuizCategory />} />
       <Route path ='/quizselection' element ={<QuizSelection />} />
       <Route path ='/quiz' element={<QuizScreen />} />
+      <Route path ="/signin" element={<SignInPage />} />
 
     </Routes>
     <Footer/>
