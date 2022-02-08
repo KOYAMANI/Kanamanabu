@@ -3,15 +3,15 @@
     box-sizing: border-box;
     display: grid;
     place-content: center;
-    width: 50%;
-    height: 50vh;
+    width: 50vw;
+    height: 60vh;
     background: #ececec;
 }
   
 .Heading {
-    margin: 0;
+    margin: 2rem;
+    font-size: 1.5rem;
     color: #333333;
     position: absolute;
     border: red 1px solid;
 }
-  

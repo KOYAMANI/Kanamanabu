@@ -33,7 +33,7 @@ function LoginForm() {
   return (
     <div className={styles.main}>
       <h1 className={styles.Heading}>Welcome back</h1>
-      <form>
+      <form onSubmit={submitHandler}>
         <Input
           type="email"
           placeholder="Email"
