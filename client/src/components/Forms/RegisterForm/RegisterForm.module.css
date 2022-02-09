@@ -1,5 +1,4 @@
 .main {
-    border: 1px solid red;
     box-sizing: border-box;
     display: grid;
     place-content: center;
@@ -13,5 +12,4 @@
     font-size: 1.5rem;
     color: #333333;
     position: absolute;
-    border: red 1px solid;
 }
