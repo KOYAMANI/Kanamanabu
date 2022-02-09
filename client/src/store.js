@@ -7,12 +7,6 @@ import {
     userUpdateReducer,
  } from './reducers/userReducers';
 import { 
-    noteDeleteReducer,
-    notesCreateReducer,
-    notesListReducer, 
-    notesUpdateReducer,
- } from './reducers/notesReducer';
-import { 
     quizListReducer,
     quizCategoryListReducer,
     quizAnswerSelectedReducer,
@@ -26,10 +20,6 @@ import { scoreShowReducer, scoreUpdateReducer } from './reducers/scoreReducer';
 const reducer = combineReducers({
     userLogin: userLoginReducer,
     userRegister: userRegisterReducer,
-    noteList: notesListReducer,
-    noteCreate: notesCreateReducer,
-    noteUpdate: notesUpdateReducer,
-    noteDelete: noteDeleteReducer,
     userUpdate: userUpdateReducer,
     quizList: quizListReducer,
     categoryList: quizCategoryListReducer,
