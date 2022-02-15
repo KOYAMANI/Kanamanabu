@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { 
+import {
+    useLocation,
     useNavigate,
 } from 'react-router-dom';
 import { logout } from '../../actions/userActions'
@@ -16,11 +17,19 @@ import icon from '../../assets/noprofileimage.png'
 export const NavBar = () => {
 
     const history = useNavigate();
+    const location = useLocation();
+
+    const [hide, setHide] = useState(false);
+    console.log(location)
 
     const dispatch = useDispatch();
 
     const userLogin = useSelector(state => state.userLogin);
     const { userInfo }= userLogin;
+
+    useEffect(() => {
+        if(location.pathname === '/') setHide(true);
+    }, [])
 
     const logoutHandler = () => {
         dispatch(logout());
@@ -29,6 +38,7 @@ export const NavBar = () => {
     }
 
     return (
+        (!hide)?
         <Navbar bg="primary" expand="lg">
             <Container fluid>
                 <Navbar.Brand>
@@ -82,7 +92,7 @@ export const NavBar = () => {
                 
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar>: <div></div>
     )
 }
 
