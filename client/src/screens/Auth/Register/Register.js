@@ -34,7 +34,7 @@ const Register = () => {
 
     useEffect(() => {
       if(userInfo){
-        history('/contents')
+        history('/quizcategory')
       }
     }, [history, userInfo])
 

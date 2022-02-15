@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* TODO change later */
+:root {
+  --actionColor: darkred;
+  --white: white;
+}
+.button.inverted {
+  --mainColor: transparent;
+  --secondaryColor: var(--white);
+}
+/* TODO End */

@@ -1,0 +1,7 @@
+.main {
+    position: relative;
+    display: flex;
+
+    height: 60vh;
+    width: 50vw;
+}

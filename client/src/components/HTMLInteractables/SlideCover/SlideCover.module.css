@@ -1,0 +1,52 @@
+.main {
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+    position: absolute;
+
+    box-sizing: border-box;
+    width: 50%;
+    height: 60vh;
+    background: #333333;
+    z-index: 2;
+
+  }
+  
+.Heading {
+    margin: 2rem;
+    color: white;
+    font-size: 1.5rem;
+
+  }
+  
+.Right {
+    right: 0;
+  }
+  
+.Left {
+  right:50%;
+  }
+
+.SubHeading {
+  box-sizing: border-box;
+  margin: 2rem;
+  color: #E9E9E9;
+  border-left: solid white 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.Switch {
+  margin: 2rem;
+  color: white;
+}
+
+.SwitchButton {
+  color: #00C2FF;
+}
+
+.SwitchButton:hover {
+  cursor: pointer;
+  color: #008bb5
+}
+

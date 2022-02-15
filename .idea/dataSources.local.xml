@@ -12,8 +12,6 @@
             <name qname="@" />
             <name qname="myFirstDatabase" />
           </node>
-        </introspection-scope>
-      </schema-mapping>
     </data-source>
   </component>
 </project>

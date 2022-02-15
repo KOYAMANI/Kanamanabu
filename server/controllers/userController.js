@@ -81,14 +81,14 @@ const updateUserProfile = asyncHandler(
             user.password = req.body.password
         }
 
-        const udpatedUser = await user.save();
+        const updatedUser = await user.save();
 
         res.json({
-            _id: udpatedUser._id,
-            name: udpatedUser.name,
-            email: udpatedUser.email,
-            pic: udpatedUser.pic,
-            token: generateToken(udpatedUser._id),
+            _id: updatedUser._id,
+            name: updatedUser.name,
+            email: updatedUser.email,
+            pic: updatedUser.pic,
+            token: generateToken(updatedUser._id),
         })
     } else{
         res.status(404);
@@ -97,4 +97,21 @@ const updateUserProfile = asyncHandler(
  
 });
 
-module.exports = {registerUser, loginUser, updateUserProfile};
+const deleteUser = asyncHandler(
+    async(req, res, next) => {
+        const { email } = req.body;
+
+        const user = await User.findOne({email});
+
+        if(user){
+            await user.deleteOne();
+            res.status(200).json({
+                _id: user._id,
+            });
+        } else{
+            res.status(404);
+            throw new Error("User not found")
+        }
+    });
+
+module.exports = {registerUser, loginUser, updateUserProfile, deleteUser};

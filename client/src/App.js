@@ -16,15 +16,16 @@ import EditProfile from './screens/EditProfile/EditProfile';
 import QuizCategory from './screens/Quiz/QuizCategory/QuizCategory';
 import QuizSelection from './screens/Quiz/QuizSelection/QuizSelection';
 import QuizScreen from './screens/Quiz/Quizes/QuizScreen';
+import SignInPage from "./screens/Auth/SignInPage/SignInPage";
 
 
 const App = () =>(
   <BrowserRouter>
     <NavBar />
     <Routes>
-      <Route path ='/' element ={ <Login />} />
+      <Route path ='/' element ={ <SignInPage />} />
       {/* <Route path ='/login' element ={ <Login />} />         */}
-      <Route path ='/register' element ={ <Register />} />     
+      {/* <Route path ='/register' element ={ <Register />} />      */}
       <Route path ='/contents' element ={<Contents />} />
       <Route path ='/account' element ={<Account />} />
       <Route path ='/editprofile' element ={<EditProfile />} />
@@ -32,6 +33,7 @@ const App = () =>(
       <Route path ='/quizcategory' element ={<QuizCategory />} />
       <Route path ='/quizselection' element ={<QuizSelection />} />
       <Route path ='/quiz' element={<QuizScreen />} />
+
 
     </Routes>
     <Footer/>
