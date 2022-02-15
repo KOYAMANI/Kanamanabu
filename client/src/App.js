@@ -23,9 +23,9 @@ const App = () =>(
   <BrowserRouter>
     <NavBar />
     <Routes>
-      <Route path ='/' element ={ <Login />} />
+      <Route path ='/' element ={ <SignInPage />} />
       {/* <Route path ='/login' element ={ <Login />} />         */}
-      <Route path ='/register' element ={ <Register />} />     
+      {/* <Route path ='/register' element ={ <Register />} />      */}
       <Route path ='/contents' element ={<Contents />} />
       <Route path ='/account' element ={<Account />} />
       <Route path ='/editprofile' element ={<EditProfile />} />
@@ -33,7 +33,7 @@ const App = () =>(
       <Route path ='/quizcategory' element ={<QuizCategory />} />
       <Route path ='/quizselection' element ={<QuizSelection />} />
       <Route path ='/quiz' element={<QuizScreen />} />
-      <Route path ="/signin" element={<SignInPage />} />
+
 
     </Routes>
     <Footer/>
