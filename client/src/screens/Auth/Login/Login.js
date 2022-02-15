@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate,} from "react-router-dom";
 import { login } from "../../../actions/userActions"
+import styles from "./Login.module.css";
+import wallpaper from "../../../assets/fuji_bw.png";
 
-import { LoginContainer } from './Login.styles'
+import { Heading, LoginContainer } from './Login.styles'
 import OnboardingScreen from '../../../components/OnboardingScreen/OnboardingScreen'
 import Loading from "../../../components/Loading/Loading";
 import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
@@ -14,6 +16,7 @@ import {
   Col } from "react-bootstrap";
 
 import LoginButton from "../../../components/HTMLInteractables/Button/Button";
+import Headingone from "../../../components/HTMLInteractables/Headingone/Headingone";
 
 const Login = () => {
 
@@ -41,46 +44,55 @@ const Login = () => {
     }
 
     return (
-        <OnboardingScreen title="Login">
+        <div className={styles.parentContainer}>
 
-        <LoginContainer>
+            <img
+                className={styles.wallpaper}
+                src={wallpaper}
+                alt="Wallpaper"
+            ></img>
+
+        <div className={styles.backDiv}>
+        <div className={styles.loginDiv}>
           {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
           {loading && <Loading />}
-          <Form onSubmit={submitHandler}>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                value={email}
-                placeholder="Enter email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </Form.Group>
-  
-            <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                value={password}
-                placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </Form.Group>
-  
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
-          <Row className="py-3">
-            <Col>
-              Don't have an account ? <Link to="/register">Register Here</Link>
-            </Col>
-          </Row>
 
-          {/*<LoginButton text="test"></LoginButton>*/}
-        </LoginContainer>
+          <Headingone text="おかえりなさい"></Headingone>
+          <form onSubmit={submitHandler} className={styles.loginForm}>
+
+            <label>Email</label>
+            <input
+              type="email"
+              value={email}
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+
+            <label>Password</label>
+            <input
+              type="password"
+              value={password}
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+  
+            <LoginButton text="Login" type="submit"></LoginButton>
+
+          </form>
+
+
+
+        </div>
+        <div className={styles.registerDiv}>
+          <Headingone text="KanaManabu"></Headingone>
+            <p>
+              Don't have an account? <Link to="/register">Register Here</Link>
+            </p>
+        </div>
+        </div>
+
         
-      </OnboardingScreen>
+      </div>
     )
 }
-export default Login
+export default Login;

@@ -1,0 +1,15 @@
+.main {
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    width: 50vw;
+    height: 60vh;
+    background: #ececec;
+}
+  
+.Heading {
+    margin: 2rem;
+    font-size: 1.5rem;
+    color: #333333;
+    position: absolute;
+}

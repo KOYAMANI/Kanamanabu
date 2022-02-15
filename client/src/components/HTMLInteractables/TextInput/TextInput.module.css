@@ -1,0 +1,15 @@
+.Input {
+    box-sizing: border-box;
+    width: 16rem;
+    height: 2.5rem;
+  
+    outline: none;
+    background: #E1E1E1;
+    border-radius: 2px;
+    border: none;
+    color: #222222;
+  }
+  
+  .Input:focus {
+    border: 1px solid #222222;
+  }
