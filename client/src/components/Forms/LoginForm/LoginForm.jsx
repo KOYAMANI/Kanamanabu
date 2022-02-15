@@ -5,6 +5,7 @@ import { login } from "../../../actions/userActions"
 import styles from "./LoginForm.module.css";
 import Button from "../../HTMLInteractables/Button/Button";
 import Input from "../../HTMLInteractables/TextInput/TextInput";
+import ErrorMessage from "../../ErrorMessage/ErrorMessage";
 
 function LoginForm() {
 
@@ -33,6 +34,8 @@ function LoginForm() {
   return (
     <div className={styles.main}>
       <h1 className={styles.Heading}>Welcome back</h1>
+      {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+
       <form onSubmit={submitHandler}>
         <Input
           type="email"

@@ -45,6 +45,8 @@ function RegisterForm() {
     return (
       <div className={styles.main}>
         <h1 className={styles.Heading}>Get Started</h1>
+        {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+        {message && <ErrorMessage variant="danger">{message}</ErrorMessage>}
         <form onSubmit={submitHandler}>
           <Input
             placeholder="Username"
