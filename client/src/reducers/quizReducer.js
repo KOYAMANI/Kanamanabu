@@ -27,12 +27,12 @@ export const quizCategoryListReducer = (state={ categories: [] }, action) => {
 }
 
 
-export const quizListReducer = (state={ quizes: [] }, action) => {
+export const quizListReducer = (state={ quizzes: [] }, action) => {
     switch ( action.type ){
         case QUIZ_LIST_REQUEST:
             return { loading: true }
         case QUIZ_LIST_SUCCESS:
-            return { loading: false, quizes: action.payload }
+            return { loading: false, quizzes: action.payload }
         case QUIZ_LIST_FAIL:
             return { loading: false, error: action.payload}
         default:
