@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="WS-213.6777.57">
-    <data-source name="Kanamanabu DB" uuid="5b74959e-160b-4fe6-bc07-7683003a31c9">
-      <database-info product="Mongo DB" version="4.4.11" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.13" dbms="MONGO" exact-version="4.4.11" exact-driver-version="1.13" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>admin</user-name>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="schema">
-            <name qname="@" />
-            <name qname="myFirstDatabase" />
-          </node>
+    <data-source name="Kanamanabu DB" uuid="f545a024-41f2-4278-9c77-493896d1ff49">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MONGO" exact-version="0" />
+      <schema-mapping />
     </data-source>
   </component>
 </project>

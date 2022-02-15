@@ -45,13 +45,11 @@ const Login = () => {
 
     return (
         <div className={styles.parentContainer}>
-
             <img
                 className={styles.wallpaper}
                 src={wallpaper}
                 alt="Wallpaper"
             ></img>
-
         <div className={styles.backDiv}>
         <div className={styles.loginDiv}>
           {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}

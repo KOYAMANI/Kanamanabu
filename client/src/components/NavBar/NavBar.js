@@ -19,17 +19,12 @@ export const NavBar = () => {
     const history = useNavigate();
     const location = useLocation();
 
-    const [hide, setHide] = useState(false);
     console.log(location)
 
     const dispatch = useDispatch();
 
     const userLogin = useSelector(state => state.userLogin);
     const { userInfo }= userLogin;
-
-    useEffect(() => {
-        if(location.pathname === '/') setHide(true);
-    }, [])
 
     const logoutHandler = () => {
         dispatch(logout());
@@ -38,7 +33,7 @@ export const NavBar = () => {
     }
 
     return (
-        (!hide)?
+        (location.pathname !== '/')?
         <Navbar bg="primary" expand="lg">
             <Container fluid>
                 <Navbar.Brand>
