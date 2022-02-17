@@ -6,7 +6,7 @@ import { QuizCategoryContainer, QuizCategoryWrapper } from "./QuizCategory.style
 import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../../components/Loading/Loading";
 import {fetchCategories} from '../../../actions/quizActions';
-import {openSideMenu, closeSideMenu} from "../../../actions/sideMenuActions";
+import {updateSideMenu} from "../../../actions/sideMenuActions";
 
 
 const QuizCategory = () => {
@@ -15,15 +15,9 @@ const QuizCategory = () => {
     const categoryList = useSelector(state => state.categoryList);
     const  { loading, categories, error} = categoryList;
 
-    const isShowSideMenu = useSelector(state => state.isShowSideMenu);
-    const { showSideMenu } = isShowSideMenu;
 
-    const handleMouseEnter= () => {
-        dispatch(openSideMenu());
-
-    }
-    const handleMouseLeave= () => {
-        dispatch(closeSideMenu());
+    const handleMouseEnter= (selection) => {
+        dispatch(updateSideMenu(selection));
     }
 
     useEffect(() => {
@@ -42,7 +36,7 @@ const QuizCategory = () => {
             {loading && <Loading/>}
             <QuizCategoryContainer  >
                 {categories?.map(category=>(  
-                    <QuizCategoryWrapper key={category._id} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <QuizCategoryWrapper key={category._id} onMouseEnter={handleMouseEnter(category.category)}>
                         <QuizCategoryCard category={category} /> 
                     </QuizCategoryWrapper>                
                 )) } 

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {SideMenuContainer} from "./SideMenuElements";
 
-class SideMenu extends Component {
-    render() {
+const SideMenu =({child})=> {
         return (
-            <SideMenuContainer />
+            <SideMenuContainer>
+                {child}
+           < / SideMenuContainer>
         );
-    }
 }
 
 

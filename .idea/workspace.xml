@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fcb64f5-a8fa-4f20-a873-532d57275391" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/actions/sideMenuActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/EmptyMenu/EmptyMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/EmptyMenu/EmptyMenuElements.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/SideMenu/SideMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/SideMenu/SideMenuElements.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/constants/sideMenuConstants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/reducers/sideMenuReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/data/contents.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Quiz/QuizCategory/QuizCategoryCard/QuizCategoryCardElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Quiz/QuizCategory/QuizCategoryCard/QuizCategoryCardElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/sideMenuActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/sideMenuActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Quiz/QuizCategory/QuizCategoryScreen/QuizCategoryScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Quiz/QuizCategory/QuizCategoryScreen/QuizCategoryScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SideMenu/SideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideMenu/SideMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/sideMenuConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/sideMenuConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/reducers/sideMenuReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/sideMenuReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/screens/Quiz/QuizCategory/QuizCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/screens/Quiz/QuizCategory/QuizCategory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/screens/Quiz/QuizCategory/QuizCategory.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/screens/Quiz/QuizCategory/QuizCategory.styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
