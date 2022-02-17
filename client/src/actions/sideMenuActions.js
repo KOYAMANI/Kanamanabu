@@ -1,24 +1,10 @@
 import {
-    SIDE_MENU_SHOW,
-    SIDE_MENU_HIDE,
     SIDE_MENU_UPDATE_REQUEST,
     SIDE_MENU_UPDATE_SUCCESS,
     SIDE_MENU_UPDATE_FAIL
 } from "../constants/sideMenuConstants";
 import axios from "axios";
 
-export const openSideMenu = () => async (dispatch) => {
-    console.log('open')
-    dispatch({
-        type: SIDE_MENU_SHOW,
-    });
-}
-
-export const closeSideMenu = () => async (dispatch) => {
-    dispatch({
-        type: SIDE_MENU_HIDE,
-    });
-}
 
 export const updateSideMenu = (selection) => async (dispatch) => {
 

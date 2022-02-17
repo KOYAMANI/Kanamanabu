@@ -40,6 +40,7 @@ export const NavBar = () => {
             <NavLink to='/'>
                 Kanamanabu
             </NavLink>
+
             <CustomNavDropdown title={
                 <img src={
                     userInfo.pic?
