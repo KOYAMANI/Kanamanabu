@@ -1,28 +1,42 @@
 import styled from 'styled-components';
 import { NavLink as Link} from 'react-router-dom';
 import icon from '../../assets/noprofileimage.png'
-import { 
-
+import {
   NavDropdown,
 } from 'react-bootstrap';
 
+export const Nav = styled.nav`
+  background: #A8A8A8;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+`;
 
 export const NavLink = styled(Link)`
-  color: #5a5a5a;
+  color: black;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-
   &.active {
-    color: #f77879;
+    color: #15cdfc;
+  }
+`;
+
+export const NavMenu = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: -24px;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
 
 export const CustomNavDropdown = styled(NavDropdown)`
-  drop: none;
+  color: black;
 `;
 
 export const NavImage = styled.div`

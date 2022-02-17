@@ -1,21 +1,27 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { 
+import {
+    useLocation,
     useNavigate,
 } from 'react-router-dom';
 import { logout } from '../../actions/userActions'
-import {  NavLink, CustomNavDropdown } from './NavBarElements';
-import { 
-    Container, 
-    Nav, 
-    Navbar, 
+import {
+    Nav,
+    NavLink,
+    CustomNavDropdown,
+} from './NavBarElements';
+import {
     NavDropdown,
 } from 'react-bootstrap';
 import icon from '../../assets/noprofileimage.png'
+import { MenuItem } from "@material-ui/core";
 
 export const NavBar = () => {
 
     const history = useNavigate();
+    const location = useLocation();
+
+    console.log(location)
 
     const dispatch = useDispatch();
 
@@ -29,60 +35,36 @@ export const NavBar = () => {
     }
 
     return (
-        <Navbar bg="primary" expand="lg">
-            <Container fluid>
-                <Navbar.Brand>
-                    <NavLink to = "/">Home</NavLink>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
-                < Nav className='m-auto' />
-                {userInfo ? 
-                <Nav
-                    className="me-auto my-2 my-lg-0"
-                    style={{ maxHeight: '100px' }}
-                    navbarScroll 
-                >
-                    <Nav.Link>
-                        <NavLink to = "/quizcategory">Contents</NavLink>
-                    </Nav.Link>
-                    <CustomNavDropdown title={
-                        <img src={
-                            userInfo.pic?
-                            userInfo.pic:
-                            icon
-                        }
-                        alt='profile icon'
-                    
-                        width={45}
-                        height={45} 
-                        />}
-                    id="navbarScrollingDropdown">
-                    <NavDropdown.Divider />  
-                    <Nav.Link>
-                        <NavLink to = "/account">Account</NavLink>
-                    </Nav.Link>
-                    <Nav.Link>
-                        <NavLink to = "/editprofile">Edit Profile</NavLink>
-                    </Nav.Link>              
-                    <Nav.Link> 
-                        <NavDropdown.Item onClick={logoutHandler}>
-                            Logout
-                        </NavDropdown.Item>
-                    </Nav.Link>
-                    </CustomNavDropdown>
-                </Nav> :
-                //if user is not logged in
-                <Nav>
-                    <Nav.Link>
-                        <NavLink to = "/">Login</NavLink>
-                    </Nav.Link>
-                </Nav>
+        (location.pathname !== '/')?
+        <Nav className="ms-auto">
+            <NavLink to='/'>
+                Kanamanabu
+            </NavLink>
+            <CustomNavDropdown title={
+                <img src={
+                    userInfo.pic?
+                        userInfo.pic:
+                        icon
                 }
-                
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+                     alt='profile icon'
+
+                     width={45}
+                     height={45}
+                />}
+                               id="navbarScrollingDropdown">
+
+                <MenuItem>
+                    <NavLink to='/account'>Account</NavLink>
+                </MenuItem>
+                <MenuItem>
+                    <NavLink to='/editprofile'>Edit Profile</NavLink>
+                </MenuItem>
+                <NavDropdown.Divider />
+                <MenuItem onClick={logoutHandler}>
+                    <NavLink to='/'>Log out</NavLink>
+                </MenuItem>
+            </CustomNavDropdown>
+        </Nav>:<div></div>
     )
 }
 

@@ -15,6 +15,7 @@ app.use(express.json());
 app.use('/api/users', userRoutes)
 app.use('/api/quizzes', quizRoutes)
 app.use('/api/achievements', achievementRoutes)
+app.use('/api/selections', selectionRoutes)
 
 // ------deployment------>>
 
