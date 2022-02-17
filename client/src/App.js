@@ -9,8 +9,6 @@ import {
 import Footer from './components/Footer/Footer';
 import NavBar from './components/NavBar/NavBar';
 import Account from './screens/Account/Account';
-import Register from './screens/Auth/Register/Register';
-import Login from './screens/Auth/Login/Login';
 import Contents from './screens/Contents/Contents'
 import EditProfile from './screens/EditProfile/EditProfile';
 import QuizCategory from './screens/Quiz/QuizCategory/QuizCategory'
@@ -24,8 +22,6 @@ const App = () =>(
     <NavBar />
     <Routes>
       <Route path ='/' element ={ <SignInPage />} />
-      {/* <Route path ='/login' element ={ <Login />} />         */}
-      {/* <Route path ='/register' element ={ <Register />} />      */}
       <Route path ='/contents' element ={<Contents />} />
       <Route path ='/account' element ={<Account />} />
       <Route path ='/editprofile' element ={<EditProfile />} />

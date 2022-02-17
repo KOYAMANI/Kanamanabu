@@ -11,12 +11,12 @@ import {
 const QuizCategoryCard = ({category}) => {
     return (
         <QuizCategoryBox background={ Object.values(category.imageUrl) }>
-            <Link to='/quizselection'
-                    style={{ textDecoration: 'none' }}
-                    state={{ title: category.title,
-                        category: category.category,
-                        subcategory: category.subcategory
-                    }}>
+            {/*<Link to='/quizselection'*/}
+            {/*        style={{ textDecoration: 'none' }}*/}
+            {/*        state={{ title: category.title,*/}
+            {/*            category: category.category,*/}
+            {/*            subcategory: category.subcategory*/}
+            {/*        }}>*/}
                 <Col>
                     <QuizCategoryCardTitle>
                         {category.category}
@@ -25,7 +25,7 @@ const QuizCategoryCard = ({category}) => {
                         {category.title}
                     </QuizCategoryCardSubTitle>
                 </Col>
-            </Link>
+            {/*</Link>*/}
         </QuizCategoryBox>
     )
 }

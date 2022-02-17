@@ -16,8 +16,9 @@ const QuizCategory = () => {
     const  { loading, categories, error} = categoryList;
 
 
-    const handleMouseEnter= (selection) => {
+    const sideMenuUpdate= (selection) => {
         dispatch(updateSideMenu(selection));
+        console.log(`menu update ${selection}`)
     }
 
     useEffect(() => {
@@ -33,14 +34,14 @@ const QuizCategory = () => {
             }
             {loading && <Loading/>}
             <QuizCategoryContainer  >
-                {categories?.map(category=>(  
-                    <QuizCategoryWrapper key={category._id} onMouseOver={handleMouseEnter(category.category)}>
-                        <QuizCategoryCard category={category} /> 
-                    </QuizCategoryWrapper>                
+                {categories?.map(category=>(
+                    <QuizCategoryWrapper key={category._id} onMouseEnter={() => sideMenuUpdate(category.category)}>
+                        <QuizCategoryCard category={category}/>
+                    </QuizCategoryWrapper>
                 )) } 
             </QuizCategoryContainer>
         </QuizCategoryScreen>
-        
+
     )
 }
 

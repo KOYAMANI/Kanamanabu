@@ -6,11 +6,10 @@ const SideMenu =()=> {
 
     const sideMenuContents = useSelector(state => state.currentSideMenu);
     const {currentSelection } = sideMenuContents;
-    console.log(currentSelection)
 
     return (
             <SideMenuContainer>
-                {currentSelection? currentSelection: 'no selection'}
+                <h1>{currentSelection? currentSelection: 'no selection'}</h1>
            < / SideMenuContainer>
         );
 }

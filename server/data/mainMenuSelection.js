@@ -1,13 +1,25 @@
 const selections = [
     {
-        alphabet: "hiragana",
+        selection: "noun",
+        letters:[
+            ""
+        ]
+    },
+    {
+        selection: "verb",
+        letters:[
+            ""
+        ]
+    },
+    {
+        selection: "hiragana",
         consonant: "a",
         letters:[
             "あ", "い", "う", "え", "お"
         ]
     },
     {
-        alphabet: "hiragana",
+        selection: "hiragana",
         consonant: "ka",
         letters:[
             "か", "き", "く", "け", "こ"
@@ -15,49 +27,49 @@ const selections = [
     },
 
     {
-        alphabet: "hiragana",
+        selection: "hiragana",
         consonant: "sa",
         letters:[
             "さ", "し", "す", "せ", "そ"
         ]
     },
     {
-        alphabet: "hiragana",
+        selection: "hiragana",
         consonant: "ta",
         letters:[
             "た", "ち", "つ", "て", "と"
         ]
     },
     {
-        alphabet: "hiragana",
+        selection: "hiragana",
         consonant: "na",
         letters:[
             "な", "に", "ぬ", "ね", "の"
         ]
     },
     {
-        alphabet: "hiragana",
+        selection: "hiragana",
         consonant: "ha",
         letters:[
             "は", "ひ", "ふ", "へ", "ほ"
         ]
     },
     {
-        alphabet: "hiragana",
+        selection: "hiragana",
         consonant: "ma",
         letters:[
             "ま", "み", "む", "め", "も"
         ]
     },
     {
-        alphabet: "hiragana",
+        selection: "hiragana",
         consonant: "ya",
         letters:[
             "や", "", "ゆ", "", "よ"
         ]
     },
     {
-        alphabet: "hiragana",
+        selection: "hiragana",
         consonant: "ra",
         letters:[
             "ら", "り", "る", "れ", "ろ"
@@ -65,21 +77,21 @@ const selections = [
     },
 
     {
-        alphabet: "hiragana",
+        selection: "hiragana",
         consonant: "wa",
         letters:[
             "わ", "", "を", "", "ん"
         ]
     },
     {
-        alphabet: "katakana",
+        selection: "katakana",
         consonant: "a",
         letters:[
             "ア", "イ", "ウ", "エ", "オ"
         ]
     },
     {
-        alphabet: "katakana",
+        selection: "katakana",
         consonant: "ka",
         letters:[
             "カ", "キ", "ク", "ケ", "コ"
@@ -87,56 +99,56 @@ const selections = [
     },
 
     {
-        alphabet: "katakana",
+        selection: "katakana",
         consonant: "sa",
         letters:[
             "サ", "シ", "ス", "セ", "ソ"
         ]
     },
     {
-        alphabet: "katakana",
+        selection: "katakana",
         consonant: "ta",
         letters:[
             "タ", "チ", "ツ", "テ", "ト"
         ]
     },
     {
-        alphabet: "katakana",
+        selection: "katakana",
         consonant: "na",
         letters:[
             "ナ", "ニ", "ヌ", "ネ", "ノ"
         ]
     },
     {
-        alphabet: "katakana",
+        selection: "katakana",
         consonant: "ha",
         letters:[
             "ハ", "ヒ", "フ", "ヘ", "ホ"
         ]
     },
     {
-        alphabet: "katakana",
+        selection: "katakana",
         consonant: "ma",
         letters:[
             "マ", "ミ", "ム", "メ", "モ"
         ]
     },
     {
-        alphabet: "katakana",
+        selection: "katakana",
         consonant: "ya",
         letters:[
             "ヤ", "", "ユ", "", "ヨ"
         ]
     },
     {
-        alphabet: "katakana",
+        selection: "katakana",
         consonant: "ra",
         letters:[
             "ラ", "リ", "ル", "レ", "ロ"
         ]
     },
     {
-        alphabet: "katakana",
+        selection: "katakana",
         consonant: "wa",
         letters:[
             "ワ", "", "ヲ", "", "ン"

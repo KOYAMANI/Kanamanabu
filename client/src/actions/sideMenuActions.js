@@ -29,7 +29,6 @@ export const updateSideMenu = (selection) => async (dispatch) => {
 
         // const { data } = await axios.get(`/api/selections/${selection}`);
         const data = selection.toString()
-        console.log(data)
 
         dispatch({
             type: SIDE_MENU_UPDATE_SUCCESS,

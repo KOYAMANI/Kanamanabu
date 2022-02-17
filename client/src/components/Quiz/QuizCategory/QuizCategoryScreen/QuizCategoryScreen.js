@@ -6,13 +6,9 @@ import {
 } from 'react-bootstrap';
 import { QuizCategoryMain } from './QuizCategoryScreenElements';
 import SideMenu from "../../../SideMenu/SideMenu";
-import { useDispatch, useSelector } from "react-redux";
 
 
 const QuizCategoryScreen = ({children}) => {
-
-
-
     return (
         <QuizCategoryMain>
             <Col>
