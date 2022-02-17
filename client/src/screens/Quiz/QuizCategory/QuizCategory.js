@@ -24,8 +24,6 @@ const QuizCategory = () => {
         dispatch(fetchCategories());
     }, [dispatch])
 
-    console.log(categories)
-
     return (
         <QuizCategoryScreen>
             {error 
@@ -36,7 +34,7 @@ const QuizCategory = () => {
             {loading && <Loading/>}
             <QuizCategoryContainer  >
                 {categories?.map(category=>(  
-                    <QuizCategoryWrapper key={category._id} onMouseEnter={handleMouseEnter(category.category)}>
+                    <QuizCategoryWrapper key={category._id} onMouseOver={handleMouseEnter(category.category)}>
                         <QuizCategoryCard category={category} /> 
                     </QuizCategoryWrapper>                
                 )) } 

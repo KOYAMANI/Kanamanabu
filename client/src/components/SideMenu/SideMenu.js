@@ -1,10 +1,16 @@
-import React, { Component } from 'react';
-import {SideMenuContainer} from "./SideMenuElements";
+import React from 'react';
+import { SideMenuContainer } from "./SideMenuElements";
+import { useDispatch, useSelector } from "react-redux";
 
-const SideMenu =({child})=> {
-        return (
+const SideMenu =()=> {
+
+    const sideMenuContents = useSelector(state => state.currentSideMenu);
+    const {currentSelection } = sideMenuContents;
+    console.log(currentSelection)
+
+    return (
             <SideMenuContainer>
-                {child}
+                {currentSelection? currentSelection: 'no selection'}
            < / SideMenuContainer>
         );
 }

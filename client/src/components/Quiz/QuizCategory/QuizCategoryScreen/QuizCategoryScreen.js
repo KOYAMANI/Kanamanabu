@@ -11,8 +11,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 const QuizCategoryScreen = ({children}) => {
 
-    const sideMenuContents = useSelector(state => state.selections);
-    const { data } = sideMenuContents;
 
 
     return (
@@ -20,7 +18,7 @@ const QuizCategoryScreen = ({children}) => {
             <Col>
                 <h2>Choose a category and start learning !</h2>
                 <Row>
-                    <SideMenu>{data}</SideMenu>
+                    <SideMenu/>
                     {children}
                 </Row>
             </Col>

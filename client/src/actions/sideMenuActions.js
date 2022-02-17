@@ -27,13 +27,15 @@ export const updateSideMenu = (selection) => async (dispatch) => {
             type: SIDE_MENU_UPDATE_REQUEST,
         });
 
-        const { data } = await axios.get(`/api/selections/${selection}`);
-
+        // const { data } = await axios.get(`/api/selections/${selection}`);
+        const data = selection.toString()
+        console.log(data)
 
         dispatch({
             type: SIDE_MENU_UPDATE_SUCCESS,
             payload: data,
         });
+
 
     } catch (error) {
         const message =

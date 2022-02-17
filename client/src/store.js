@@ -30,7 +30,7 @@ const reducer = combineReducers({
     isShowScore: scoreShowReducer,
     achievementList: achievementListReducer,
     isShowSideMenu: sideMenuShowReducer,
-    selections: sideMenuUpdateReducer
+    currentSideMenu: sideMenuUpdateReducer
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
