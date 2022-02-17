@@ -16,6 +16,7 @@ import {
     achievementListReducer
 } from "./reducers/achievementReducers";
 import { scoreShowReducer, scoreUpdateReducer } from './reducers/scoreReducer';
+import { sideMenuShowReducer } from "./reducers/sideMenuReducer";
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
@@ -28,6 +29,7 @@ const reducer = combineReducers({
     currentScore: scoreUpdateReducer, 
     isShowScore: scoreShowReducer,
     achievementList: achievementListReducer,
+    isShowSideMenu: sideMenuShowReducer
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo')

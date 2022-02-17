@@ -14,17 +14,26 @@ export const QuizCategoryBox = styled(Box)`
     &:hover {
         border :4px solid #fff;
         background-color: #808080;
-        opacity: [0.9, 0.8, 0.7];
       }
+    @media (max-width: 1200px) {
+    width: 170px;  
+    height: 350px;
+    }
 `
 
 export const QuizCategoryCardTitle = styled.p`
     color: #ffffff;
     font-size: 24px;
     font-weight: bold;
+  @media (max-width: 800px) {
+    font-size: 20px;
+  }
 `
 
 export const QuizCategoryCardSubTitle = styled.p`
     color: #ffffff;
     font-size: 18px;
+  @media (max-width: 800px) {
+    font-size: 14px;
+  }
 `

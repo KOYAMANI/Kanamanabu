@@ -1,0 +1,2 @@
+export const SIDE_MENU_SHOW = "SIDE_MENU_SHOW"
+export const SIDE_MENU_HIDE = "SIDE_MENU_HIDE"
