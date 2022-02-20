@@ -6,7 +6,7 @@ import { QuizCategoryContainer, QuizCategoryWrapper } from "./QuizCategory.style
 import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
 import Loading from "../../../components/Loading/Loading";
 import { fetchCategories } from'../../../actions/quizActions';
-
+import ChapterSelect from "../../../components/MainScreen/ChapterSelect/ChapterSelect";
 
 const QuizCategory = () => {
     const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const QuizCategory = () => {
         dispatch(fetchCategories());
     }, [dispatch])
 
-    console.log(categories)
+    // console.log(categories);
 
     return (
         <QuizCategoryScreen>
@@ -28,6 +28,7 @@ const QuizCategory = () => {
                </ErrorMessage>
             }
             {loading && <Loading/>}
+            <ChapterSelect />
             <QuizCategoryContainer>
                 {categories?.map(category=>(  
                     <QuizCategoryWrapper key={category._id}>               

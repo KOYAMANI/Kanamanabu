@@ -1,0 +1,10 @@
+main {
+
+}
+
+span {
+    min-width: 32px;
+    min-height: 32px;
+    padding: 1rem;
+    border: 1px solid red;
+}
