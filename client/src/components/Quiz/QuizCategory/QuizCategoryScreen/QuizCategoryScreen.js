@@ -1,11 +1,10 @@
-import { React, useEffect  } from "react";
+import React from "react";
 import { 
     Row,
-    Container,
     Col, 
 } from 'react-bootstrap';
 import { QuizCategoryMain } from './QuizCategoryScreenElements';
-import SideMenu from "../../../SideMenu/SideMenu";
+import ChapterSelection from "../../../ChapterSelection/ChapterSelection";
 
 
 const QuizCategoryScreen = ({children}) => {
@@ -14,7 +13,7 @@ const QuizCategoryScreen = ({children}) => {
             <Col>
                 <h2>Choose a category and start learning !</h2>
                 <Row>
-                    <SideMenu/>
+                    <ChapterSelection/>
                     {children}
                 </Row>
             </Col>

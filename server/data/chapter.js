@@ -1,25 +1,31 @@
-const selections = [
+const chapters = [
     {
-        selection: "noun",
+        title: "introduction",
         letters:[
             ""
         ]
     },
     {
-        selection: "verb",
+        title: "noun",
         letters:[
             ""
         ]
     },
     {
-        selection: "hiragana",
+        title: "verb",
+        letters:[
+            ""
+        ]
+    },
+    {
+        title: "hiragana",
         consonant: "a",
         letters:[
             "あ", "い", "う", "え", "お"
         ]
     },
     {
-        selection: "hiragana",
+        title: "hiragana",
         consonant: "ka",
         letters:[
             "か", "き", "く", "け", "こ"
@@ -27,49 +33,49 @@ const selections = [
     },
 
     {
-        selection: "hiragana",
+        title: "hiragana",
         consonant: "sa",
         letters:[
             "さ", "し", "す", "せ", "そ"
         ]
     },
     {
-        selection: "hiragana",
+        title: "hiragana",
         consonant: "ta",
         letters:[
             "た", "ち", "つ", "て", "と"
         ]
     },
     {
-        selection: "hiragana",
+        title: "hiragana",
         consonant: "na",
         letters:[
             "な", "に", "ぬ", "ね", "の"
         ]
     },
     {
-        selection: "hiragana",
+        title: "hiragana",
         consonant: "ha",
         letters:[
             "は", "ひ", "ふ", "へ", "ほ"
         ]
     },
     {
-        selection: "hiragana",
+        title: "hiragana",
         consonant: "ma",
         letters:[
             "ま", "み", "む", "め", "も"
         ]
     },
     {
-        selection: "hiragana",
+        title: "hiragana",
         consonant: "ya",
         letters:[
             "や", "", "ゆ", "", "よ"
         ]
     },
     {
-        selection: "hiragana",
+        title: "hiragana",
         consonant: "ra",
         letters:[
             "ら", "り", "る", "れ", "ろ"
@@ -77,21 +83,21 @@ const selections = [
     },
 
     {
-        selection: "hiragana",
+        title: "hiragana",
         consonant: "wa",
         letters:[
             "わ", "", "を", "", "ん"
         ]
     },
     {
-        selection: "katakana",
+        title: "katakana",
         consonant: "a",
         letters:[
             "ア", "イ", "ウ", "エ", "オ"
         ]
     },
     {
-        selection: "katakana",
+        title: "katakana",
         consonant: "ka",
         letters:[
             "カ", "キ", "ク", "ケ", "コ"
@@ -99,56 +105,56 @@ const selections = [
     },
 
     {
-        selection: "katakana",
+        title: "katakana",
         consonant: "sa",
         letters:[
             "サ", "シ", "ス", "セ", "ソ"
         ]
     },
     {
-        selection: "katakana",
+        title: "katakana",
         consonant: "ta",
         letters:[
             "タ", "チ", "ツ", "テ", "ト"
         ]
     },
     {
-        selection: "katakana",
+        title: "katakana",
         consonant: "na",
         letters:[
             "ナ", "ニ", "ヌ", "ネ", "ノ"
         ]
     },
     {
-        selection: "katakana",
+        title: "katakana",
         consonant: "ha",
         letters:[
             "ハ", "ヒ", "フ", "ヘ", "ホ"
         ]
     },
     {
-        selection: "katakana",
+        title: "katakana",
         consonant: "ma",
         letters:[
             "マ", "ミ", "ム", "メ", "モ"
         ]
     },
     {
-        selection: "katakana",
+        title: "katakana",
         consonant: "ya",
         letters:[
             "ヤ", "", "ユ", "", "ヨ"
         ]
     },
     {
-        selection: "katakana",
+        title: "katakana",
         consonant: "ra",
         letters:[
             "ラ", "リ", "ル", "レ", "ロ"
         ]
     },
     {
-        selection: "katakana",
+        title: "katakana",
         consonant: "wa",
         letters:[
             "ワ", "", "ヲ", "", "ン"
@@ -157,4 +163,4 @@ const selections = [
 
 ];
 
-module.exports = selections;
+module.exports = chapters;
