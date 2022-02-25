@@ -30,13 +30,14 @@ function ChapterSelect() {
             </div> */}
             {Hiragana.map((HiraganaCategories, index) => {
                 return (
-                    <div className="styles.row">
-                        <span className="styles.capital">{HiraganaCategories.consonant}</span>
+                    <div className={styles.row}>
+                        <div className={styles.letters}>{HiraganaCategories.consonant}</div>
                         {HiraganaCategories.letters.map((HiraganaLetters, index) => {
                             return (
-                                <span>{HiraganaLetters}</span>
+                                <div className={styles.letters}>{HiraganaLetters}</div>
                             )
                         })}
+                        <button className={styles.practiceButton}>Practice now</button>
                     </div>
                 )
             })}

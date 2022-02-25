@@ -53,7 +53,7 @@ const selections = [
         alphabet: "hiragana",
         consonant: "ya",
         letters:[
-            "や", "", "ゆ", "", "よ"
+            "や", "ー", "ゆ", "ー", "よ"
         ]
     },
     {
