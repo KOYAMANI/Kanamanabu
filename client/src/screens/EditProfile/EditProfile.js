@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MainScreen from '../../components/MainScreen/MainScreen'
+import PrimalScreen from '../../components/Global/Layouts/PrimalScreen'
 import { 
     useDispatch, 
     useSelector 
@@ -11,8 +11,8 @@ import {
     Row, 
     Col } from "react-bootstrap";
 import { updateProfile } from "../../actions/userActions";
-import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
-import Loading from "../../components/Loading/Loading";
+import ErrorMessage from '../../components/Global/ErrorMessage/ErrorMessage';
+import Loading from "../../components/Global/Loading/Loading";
 
 const EditProfile = () => {
     const [name, setName] = useState("");
@@ -73,7 +73,7 @@ const EditProfile = () => {
 
 
     return (
-        <MainScreen title="Edit Profile">
+        <PrimalScreen title="Edit Profile">
       <div>
         <Row className="profileContainer">
           <Col md={6}>
@@ -151,7 +151,7 @@ const EditProfile = () => {
           </Col>
         </Row>
       </div>
-    </MainScreen>
+    </PrimalScreen>
     )
 } 
 

@@ -6,17 +6,17 @@ import styles from "./Login.module.css";
 import wallpaper from "../../../assets/fuji_bw.png";
 
 import { Heading, LoginContainer } from './Login.styles'
-import OnboardingScreen from '../../../components/OnboardingScreen/OnboardingScreen'
-import Loading from "../../../components/Loading/Loading";
-import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
+import OnboardingScreen from '../../../components/Global/Layouts/OnboardingScreen/OnboardingScreen'
+import Loading from "../../../components/Global/Loading/Loading";
+import ErrorMessage from "../../../components/Global/ErrorMessage/ErrorMessage";
 import { 
   Form, 
   Button, 
   Row, 
   Col } from "react-bootstrap";
 
-import LoginButton from "../../../components/HTMLInteractables/Button/Button";
-import Headingone from "../../../components/HTMLInteractables/Headingone/Headingone";
+import LoginButton from "../../../components/HTMLInteracters/Button/Button";
+import Headingone from "../../../components/HTMLInteracters/Headingone/Headingone";
 
 const Login = () => {
 

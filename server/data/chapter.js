@@ -26,7 +26,7 @@ const chapters = [
     },
     {
         title: "hiragana",
-        consonant: "ka",
+        consonant: "k",
         letters:[
             "か", "き", "く", "け", "こ"
         ]
@@ -34,49 +34,49 @@ const chapters = [
 
     {
         title: "hiragana",
-        consonant: "sa",
+        consonant: "s",
         letters:[
             "さ", "し", "す", "せ", "そ"
         ]
     },
     {
         title: "hiragana",
-        consonant: "ta",
+        consonant: "t",
         letters:[
             "た", "ち", "つ", "て", "と"
         ]
     },
     {
         title: "hiragana",
-        consonant: "na",
+        consonant: "n",
         letters:[
             "な", "に", "ぬ", "ね", "の"
         ]
     },
     {
         title: "hiragana",
-        consonant: "ha",
+        consonant: "h",
         letters:[
             "は", "ひ", "ふ", "へ", "ほ"
         ]
     },
     {
         title: "hiragana",
-        consonant: "ma",
+        consonant: "m",
         letters:[
             "ま", "み", "む", "め", "も"
         ]
     },
     {
         title: "hiragana",
-        consonant: "ya",
+        consonant: "y",
         letters:[
             "や", "", "ゆ", "", "よ"
         ]
     },
     {
         title: "hiragana",
-        consonant: "ra",
+        consonant: "r",
         letters:[
             "ら", "り", "る", "れ", "ろ"
         ]
@@ -84,21 +84,21 @@ const chapters = [
 
     {
         title: "hiragana",
-        consonant: "wa",
+        consonant: "w",
         letters:[
             "わ", "", "を", "", "ん"
         ]
     },
     {
         title: "katakana",
-        consonant: "a",
+        consonant: "",
         letters:[
             "ア", "イ", "ウ", "エ", "オ"
         ]
     },
     {
         title: "katakana",
-        consonant: "ka",
+        consonant: "k",
         letters:[
             "カ", "キ", "ク", "ケ", "コ"
         ]
@@ -106,56 +106,56 @@ const chapters = [
 
     {
         title: "katakana",
-        consonant: "sa",
+        consonant: "s",
         letters:[
             "サ", "シ", "ス", "セ", "ソ"
         ]
     },
     {
         title: "katakana",
-        consonant: "ta",
+        consonant: "t",
         letters:[
             "タ", "チ", "ツ", "テ", "ト"
         ]
     },
     {
         title: "katakana",
-        consonant: "na",
+        consonant: "n",
         letters:[
             "ナ", "ニ", "ヌ", "ネ", "ノ"
         ]
     },
     {
         title: "katakana",
-        consonant: "ha",
+        consonant: "h",
         letters:[
             "ハ", "ヒ", "フ", "ヘ", "ホ"
         ]
     },
     {
         title: "katakana",
-        consonant: "ma",
+        consonant: "m",
         letters:[
             "マ", "ミ", "ム", "メ", "モ"
         ]
     },
     {
         title: "katakana",
-        consonant: "ya",
+        consonant: "y",
         letters:[
             "ヤ", "", "ユ", "", "ヨ"
         ]
     },
     {
         title: "katakana",
-        consonant: "ra",
+        consonant: "r",
         letters:[
             "ラ", "リ", "ル", "レ", "ロ"
         ]
     },
     {
         title: "katakana",
-        consonant: "wa",
+        consonant: "w",
         letters:[
             "ワ", "", "ヲ", "", "ン"
         ]

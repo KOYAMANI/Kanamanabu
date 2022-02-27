@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import MainScreen from '../../components/MainScreen/MainScreen'
+import PrimalScreen from '../../components/Global/Layouts/PrimalScreen'
 import {
     useDispatch,
     useSelector
@@ -27,7 +27,7 @@ const Account = () => {
 
 
     return (
-        <MainScreen title = {`Welcome back ${userInfo.name}`}>
+        <PrimalScreen title = {`Welcome back ${userInfo.name}`}>
             <Container>
                 <AccountHeading>
                     Your achievements...
@@ -50,7 +50,7 @@ const Account = () => {
 
 
             </Container>
-        </MainScreen>
+        </PrimalScreen>
     )
 } 
 
