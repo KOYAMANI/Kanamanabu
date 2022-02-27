@@ -8,9 +8,9 @@ import {
     Col } from "react-bootstrap";
 import { Link, useNavigate} from "react-router-dom";
 import { RegisterContainer } from './Register.styles';
-import Loading from "../../../components/Loading/Loading";
-import ErrorMessage from "../../../components/ErrorMessage/ErrorMessage";
-import OnboardingScreen from "../../../components/OnboardingScreen/OnboardingScreen";
+import Loading from "../../../components/Global/Loading/Loading";
+import ErrorMessage from "../../../components/Global/ErrorMessage/ErrorMessage";
+import OnboardingScreen from "../../../components/Global/Layouts/OnboardingScreen/OnboardingScreen";
 
 const Register = () => {
 

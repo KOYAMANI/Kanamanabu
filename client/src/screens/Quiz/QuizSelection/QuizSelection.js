@@ -2,7 +2,7 @@
 import { React, useState, useEffect  } from "react";
 import { Container, Col} from 'react-bootstrap';
 import { useLocation, Link, useNavigate } from 'react-router-dom'
-import MainScreen from '../../../components/MainScreen/MainScreen'
+import PrimalScreen from '../../../components/Global/Layouts/PrimalScreen'
 import QuizSelectionCard from "../../../components/Quiz/QuizSelection/QuizSelectionCard";
 
 const QuizSelection = () => {
@@ -20,7 +20,7 @@ const QuizSelection = () => {
     console.log(subcategory)
 
     return (
-        <MainScreen title = {title}>
+        <PrimalScreen title = {title}>
             <Container>
             <Col>
                 {subcategory?.map(subcategory=>(  
@@ -42,7 +42,7 @@ const QuizSelection = () => {
                 )) }      
             </Col>         
             </Container>
-        </MainScreen>
+        </PrimalScreen>
     )
 }
 

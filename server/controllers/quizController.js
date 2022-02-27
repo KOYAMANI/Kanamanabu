@@ -4,7 +4,7 @@ const asyncHandler = require('express-async-handler')
 
 const getQuizCategories = asyncHandler(
     async(req, res) => {
-        const categories = await Category.find();
+        const categories = await Category.find().sort('key');
         res.json(categories);
     }
 );
