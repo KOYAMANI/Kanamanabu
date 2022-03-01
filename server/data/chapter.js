@@ -91,7 +91,7 @@ const chapters = [
     },
     {
         title: "katakana",
-        consonant: "",
+        consonant: "a",
         letters:[
             "ア", "イ", "ウ", "エ", "オ"
         ]
