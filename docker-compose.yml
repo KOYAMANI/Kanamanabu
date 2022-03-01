@@ -1,0 +1,34 @@
+version: "3"
+services:
+  kmb-react:
+    image: kmb-react
+    build: ./client/
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    networks:
+      - kmb-app
+  kmb-server:
+    image: kmb-server
+    build: ./server
+    ports:
+      - "8000:8000"
+    networks:
+      - kmb-app
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:4.4-bionic
+    ports:
+      - "27017:27017"
+    networks:
+      - kmb-app
+    volumes:
+      - mongo-data:/data/db
+
+networks:
+  kmb-app:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local
