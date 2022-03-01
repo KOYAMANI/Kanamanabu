@@ -13,5 +13,4 @@ const getChapters = asyncHandler(
 
 module.exports = {
     getChapters,
-
 };
