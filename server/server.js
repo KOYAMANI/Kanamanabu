@@ -6,6 +6,7 @@ const quizRoutes = require('./routes/quizRoutes');
 const chapterRoutes = require('./routes/chaptersRoute')
 const achievementRoutes = require('./routes/achievementRoutes');
 const { errorHandler, notFound } = require('./middlewares/errorMiddleware');
+const logger = require('./logger');
 const path = require('path');
 const app = express();
 dotenv.config;
@@ -28,10 +29,12 @@ if (process.env.NODE_ENV==="production"){
             __dirname, "client", "build", "index.html"
         ))
     );
+    logger.info('the app running on production');
 } else {
     app.get('/', (req,res)=> {
         res.send('API is running')
     });
+    logger.info('the app running on development');
 }
 
 // <<------deployment------
@@ -41,6 +44,6 @@ app.use(errorHandler)
 
 const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, console.log(`server started on PORT ${PORT}`))
+app.listen(PORT, logger.info(`server started on PORT ${PORT}`))
 
 module.exports = app;

@@ -1,6 +1,7 @@
 const Category = require('../models/quizCategoryModel');
 const Quiz = require('../models/quizModel');
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require('express-async-handler');
+const logger = require('../logger')
 
 const getQuizCategories = asyncHandler(
     async(req, res) => {
