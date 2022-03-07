@@ -28,7 +28,7 @@ function RegisterForm() {
 
   useEffect(() => {
     if(userInfo){
-      history('/contents')
+      history('/main')
     }
   }, [history, userInfo])
 
