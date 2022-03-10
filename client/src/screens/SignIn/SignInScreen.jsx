@@ -7,9 +7,9 @@ function SignInScreen() {
 
 
     return (
-        <div className={styles.main}>
+        <div className="w-screen h-screen flex justify-center items-center">
             <img
-                className={styles.wallpaper}
+                className="absolute bg-cover left-0 right-0 h-full w-full object-cover -z-10"
                 src={wallpaper}
                 alt="Wallpaper"
             />

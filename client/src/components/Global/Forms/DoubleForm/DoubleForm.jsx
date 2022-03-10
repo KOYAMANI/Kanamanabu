@@ -6,7 +6,7 @@ import styles from "./DoubleForm.module.css";
 
 function DoubleForm() {
     return (
-      <div className="relative flex h-3/5 w-2/5">
+      <div className="relative flex h-3/5 w-2/5 place-content-start">
         {/* MAKE RESPONSIVE HERE */}
         <LoginForm />
         <RegisterForm />
