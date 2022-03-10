@@ -1,6 +1,5 @@
 import React from "react";
 import DoubleForm from "../../components/Global/Forms/DoubleForm/DoubleForm";
-import styles from "./SignInScreen.module.css";
 import wallpaper from "../../assets/fuji_bw.png";
 
 function SignInScreen() {

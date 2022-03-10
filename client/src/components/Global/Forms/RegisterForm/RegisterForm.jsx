@@ -4,7 +4,6 @@ import { register } from "../../../../actions/userActions"
 import { Link, useNavigate} from "react-router-dom";
 import Loading from "../../Loading/Loading";
 import ErrorMessage from "../../ErrorMessage/ErrorMessage";
-import styles from "./RegisterForm.module.css";
 import Button from "../../../HTMLInteracters/Button/Button";
 import Input from "../../../HTMLInteracters/TextInput/TextInput";
 

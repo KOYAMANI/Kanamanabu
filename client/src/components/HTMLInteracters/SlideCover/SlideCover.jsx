@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styles from "./SlideCover.module.css";
 
 function SlideCover(props) {
 
