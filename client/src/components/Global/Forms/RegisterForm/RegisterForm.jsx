@@ -4,7 +4,6 @@ import { register } from "../../../../actions/userActions"
 import { Link, useNavigate} from "react-router-dom";
 import Loading from "../../Loading/Loading";
 import ErrorMessage from "../../ErrorMessage/ErrorMessage";
-import styles from "./RegisterForm.module.css";
 import Button from "../../../HTMLInteracters/Button/Button";
 import Input from "../../../HTMLInteracters/TextInput/TextInput";
 
@@ -43,9 +42,9 @@ function RegisterForm() {
   }
 
     return (
-      <div className={styles.main}>
-        <h1 className={styles.Heading}>Get Started</h1>
-        <form onSubmit={submitHandler}>
+      <div className="place-content-center inline-grid w-1/2 h-4/5 bg-gray-100">
+        <h1 className="m-8 text-gray-800 absolute text-2xl">Get Started</h1>
+        <form onSubmit={submitHandler} className="grid gap-4">
           <Input
             placeholder="Username"
             type="name"

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate,} from "react-router-dom";
 import { login } from "../../../../actions/userActions"
-import styles from "./LoginForm.module.css";
 import Button from "../../../HTMLInteracters/Button/Button";
 import Input from "../../../HTMLInteracters/TextInput/TextInput";
 
@@ -31,9 +30,10 @@ function LoginForm() {
   }
 
   return (
-    <div className={styles.main}>
-      <h1 className={styles.Heading}>Welcome back</h1>
-      <form onSubmit={submitHandler}>
+    <div className="place-content-center inline-grid w-1/2 h-4/5 bg-gray-100">
+      <h1 className="m-8 text-gray-800 absolute text-2xl">Welcome back</h1>
+      <form onSubmit={submitHandler} className="grid gap-4">
+        {/* TODO: BORDER BOX */}
         <Input
           type="email"
           placeholder="Email"
@@ -47,6 +47,7 @@ function LoginForm() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <Button text="Login" type="submit"/>
+
       </form>
     </div>
   );
