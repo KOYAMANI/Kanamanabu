@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styles from "./SlideCover.module.css";
 
 function SlideCover(props) {
 
@@ -16,10 +15,10 @@ const rightSwitch = "Don't have an Account? ";
 const rightSwitchButton = "Register";
 
   return (
-    <div className={(left ? styles.Left : styles.Right) + " " + styles.main}>
-      <h1 className={styles.Heading}>{left ? leftHeading : rightHeading}</h1>
-      <h2 className={styles.SubHeading}>{left ? leftSubheading : rightSubheading}</h2>
-      <p className={styles.Switch}>{left ? leftSwitch : rightSwitch}<a className={styles.SwitchButton} onClick={() => setLeft(!left)}>{left ? leftSwitchButton : rightSwitchButton}</a></p>
+    <div className={(left ? 'right-1/2' : 'right-0') + " " + 'duration-300 absolute w-1/2 h-4/5 bg-gray-800 z-10'}>
+      <h1 className="m-8 text-white text-2xl">{left ? leftHeading : rightHeading}</h1>
+      <h2 className="m-8 text-gray-200 text-2xl font-light border-l-8 border-gray-200 pl-2">{left ? leftSubheading : rightSubheading}</h2>
+      <p className="m-8 text-white">{left ? leftSwitch : rightSwitch}<a className="text-blue-400 hover:cursor-pointer hover:text-blue-200" onClick={() => setLeft(!left)}>{left ? leftSwitchButton : rightSwitchButton}</a></p>
     </div>
   );
 }
