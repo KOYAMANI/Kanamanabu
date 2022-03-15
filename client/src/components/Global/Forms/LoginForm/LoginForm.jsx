@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate,} from "react-router-dom";
+import { useNavigate,} from "react-router-dom";
 import { login } from "../../../../actions/userActions"
 import styles from "./LoginForm.module.css";
 import Button from "../../../HTMLInteracters/Button/Button";
 import Input from "../../../HTMLInteracters/TextInput/TextInput";
+import ErrorMessage from "../../ErrorMessage/ErrorMessage";
+import Loading from "../../Loading/Loading";
 
 function LoginForm() {
 
@@ -33,6 +35,8 @@ function LoginForm() {
   return (
     <div className={styles.main}>
       <h1 className={styles.Heading}>Welcome back</h1>
+        {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+        {loading && <Loading />}
       <form onSubmit={submitHandler}>
         <Input
           type="email"

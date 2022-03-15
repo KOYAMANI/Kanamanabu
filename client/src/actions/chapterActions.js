@@ -3,7 +3,7 @@ import {
     CHAPTER_UPDATE_SUCCESS,
     CHAPTER_UPDATE_FAIL
 } from "../constants/chapterConstants";
-import axios from "axios";
+import api from "../api";
 
 
 export const updateChapter = (title) => async(dispatch)=> {
@@ -12,7 +12,7 @@ export const updateChapter = (title) => async(dispatch)=> {
             type: CHAPTER_UPDATE_REQUEST,
         });
 
-        const { data } = await axios.get(`/api/chapters/${title}`);
+        const { data } = await api.getChapters(title);
 
         dispatch({
             type: CHAPTER_UPDATE_SUCCESS,

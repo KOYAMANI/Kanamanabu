@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Container, Card, Button } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import background from "../../../assets/fuji_bw.png";
 
 

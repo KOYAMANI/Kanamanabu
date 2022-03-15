@@ -1,16 +1,19 @@
 version: "3"
 services:
   kmb-react:
-    image: kmb-react
-    build: ./client/
+    image: kmb-react-dev
     stdin_open: true
     ports:
       - "3000:3000"
     networks:
       - kmb-app
+    volumes:
+      - ./client/:/usr/src/app
+      - /usr/src/app/node_modules
   kmb-server:
     image: kmb-server
     build: ./server/
+    env_file: ./server/config/dev.env
     ports:
       - "8080:8080"
     networks:
