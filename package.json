@@ -22,7 +22,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.2",
     "nodemon": "^2.0.15",
-    "update": "^0.4.2"
+    "update": "^0.4.2",
     "winston": "^3.6.0"
   },
   "devDependencies": {
