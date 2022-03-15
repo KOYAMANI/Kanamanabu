@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate,} from "react-router-dom";
+import { useNavigate,} from "react-router-dom";
 import { login } from "../../../../actions/userActions"
 import Button from "../../../HTMLInteracters/Button/Button";
 import Input from "../../../HTMLInteracters/TextInput/TextInput";
+import ErrorMessage from "../../ErrorMessage/ErrorMessage";
+import Loading from "../../Loading/Loading";
 
 function LoginForm() {
 
@@ -32,6 +34,8 @@ function LoginForm() {
   return (
     <div className="place-content-center inline-grid w-1/2 h-4/5 bg-gray-100">
       <h1 className="m-8 text-gray-800 absolute text-2xl">Welcome back</h1>
+        {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+        {loading && <Loading />}
       <form onSubmit={submitHandler} className="grid gap-4">
         {/* TODO: BORDER BOX */}
         <Input

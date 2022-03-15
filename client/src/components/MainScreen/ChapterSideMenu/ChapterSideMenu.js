@@ -1,8 +1,7 @@
 import React from 'react';
 import { useSelector } from "react-redux";
 import styles from "./ChaptertSideMenu.module.css";
-import {Link, useNavigate} from "react-router-dom";
-import QuizSelectionCard from "../../Quiz/QuizSelection/QuizSelectionCard";
+import { useNavigate} from "react-router-dom";
 const ChapterSideMenu =()=> {
 
     const chapter = useSelector(state => state.currentChapter);
@@ -28,7 +27,7 @@ const ChapterSideMenu =()=> {
                                 {chapter.consonant}
                             </div>
                             {chapter.letters.map(letters =>
-                                <div className={styles.letters} >
+                                <div className={styles.letters} key={letters}>
                                     {letters}
                                 </div>
                             )}

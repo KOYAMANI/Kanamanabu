@@ -1,0 +1,34 @@
+version: "3"
+services:
+  kmb-react:
+    image: kmb-react-prod:${ENV}
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy-data:/data
+      - caddy-config:/config
+    networks:
+      - kmb-app
+  kmb-server:
+    image: kmb-server
+    restart: unless-stopped
+    env_file:
+      - ./server/config/${ENV}.env
+    ports:
+      - "8080:8080"
+    networks:
+      - kmb-app
+
+networks:
+  kmb-app:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local
+  caddy-data:
+    driver: local
+  caddy-config:
+    driver: local
+

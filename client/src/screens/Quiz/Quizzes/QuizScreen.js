@@ -1,7 +1,7 @@
 import { React, useEffect  } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Grid,} from "@material-ui/core";
-import { Container, Card, Button } from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 import { Link,useLocation, useNavigate } from 'react-router-dom'
 import ErrorMessage from "../../../components/Global/ErrorMessage/ErrorMessage";
 import Loading from "../../../components/Global/Loading/Loading";
@@ -37,7 +37,7 @@ const QuizScreen = () => {
     useEffect(() => {
         dispatch(fetchQuizList(category, subcategory));
         if(!quizzes) history('/main')
-    }, [dispatch, category, subcategory, history])
+    }, [dispatch, category, subcategory, history, quizzes])
 
     const handleAnswerClick = (score, answer, correct) => {
         dispatch(updateScore(score, answer, correct))

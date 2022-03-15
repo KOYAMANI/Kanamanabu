@@ -27,7 +27,7 @@ function RegisterForm() {
 
   useEffect(() => {
     if(userInfo){
-      history('/contents')
+      history('/main')
     }
   }, [history, userInfo])
 
@@ -44,6 +44,8 @@ function RegisterForm() {
     return (
       <div className="place-content-center inline-grid w-1/2 h-4/5 bg-gray-100">
         <h1 className="m-8 text-gray-800 absolute text-2xl">Get Started</h1>
+        {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+        {message && <ErrorMessage variant="danger">{message}</ErrorMessage>}
         <form onSubmit={submitHandler} className="grid gap-4">
           <Input
             placeholder="Username"
