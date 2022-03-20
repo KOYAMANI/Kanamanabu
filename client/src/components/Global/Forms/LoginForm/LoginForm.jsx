@@ -5,7 +5,7 @@ import { login } from "../../../../actions/userActions"
 import Button from "../../../HTMLInteracters/Button/Button";
 import Input from "../../../HTMLInteracters/TextInput/TextInput";
 
-function LoginForm() {
+function LoginForm(props) {
 
   const history = useNavigate();
 
@@ -30,7 +30,7 @@ function LoginForm() {
   }
 
   return (
-    <div className="place-content-center inline-grid w-1/2 h-4/5 bg-gray-100">
+    <div className={(props.visible ? "inline-grid" : "hidden") + " place-content-center lg:inline-grid w-full lg:w-1/2 h-4/5 bg-gray-100"}>
       <h1 className="m-8 text-gray-800 absolute text-2xl">Welcome back</h1>
       <form onSubmit={submitHandler} className="grid gap-4">
         {/* TODO: BORDER BOX */}
@@ -43,10 +43,11 @@ function LoginForm() {
         <Input
           placeholder="Password"
           type="password"
-          value={password} 
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <Button text="Login" type="submit"/>
+        <p className="block lg:hidden text-center hover:underline" onClick={props.switcher}>Need an Account?</p>
 
       </form>
     </div>

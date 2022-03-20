@@ -7,7 +7,7 @@ import ErrorMessage from "../../ErrorMessage/ErrorMessage";
 import Button from "../../../HTMLInteracters/Button/Button";
 import Input from "../../../HTMLInteracters/TextInput/TextInput";
 
-function RegisterForm() {
+function RegisterForm(props) {
 
   const history = useNavigate();
 
@@ -41,8 +41,13 @@ function RegisterForm() {
 
   }
 
+  // When you look at this code tomorrow
+  // Remember to include a click handler in the props for the button in slidecover
+  // That toggles the hidden state
+  // All parent containers need to update in mobile
+
     return (
-      <div className="place-content-center inline-grid w-1/2 h-4/5 bg-gray-100">
+      <div className={(props.visible ? "inline-grid" : "hidden") + " place-content-center lg:inline-grid w-full lg:w-1/2 h-4/5 bg-gray-100"}>
         <h1 className="m-8 text-gray-800 absolute text-2xl">Get Started</h1>
         <form onSubmit={submitHandler} className="grid gap-4">
           <Input
@@ -70,6 +75,8 @@ function RegisterForm() {
             onChange={(e) => setConfirmPassword(e.target.value)}  
           />
           <Button text="Register" type="submit"/>
+          <p className="block lg:hidden text-center hover:underline" onClick={props.switcher}>Already have an Account?</p>
+
         </form>
       </div>
     );
