@@ -48,8 +48,8 @@ function RegisterForm(props) {
 
     return (
       <div className={(props.visible ? "inline-grid" : "hidden") + " place-content-center lg:inline-grid w-full lg:w-1/2 h-4/5 bg-gray-100"}>
-        <h1 className="m-8 text-gray-800 absolute text-2xl">Get Started</h1>
-        <form onSubmit={submitHandler} className="grid gap-4">
+        <h1 className="m-2 lg:m-8 text-gray-800 absolute text-xl lg:text-2xl">Get Started</h1>
+        <form onSubmit={submitHandler} className="grid gap-3">
           <Input
             placeholder="Username"
             type="name"
