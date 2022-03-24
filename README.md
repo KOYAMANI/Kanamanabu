@@ -76,3 +76,7 @@ Inputted password is hashed by `bcrypt.js` before being stored.
 
 Users should go through `authMiddleware` for the authorization.\
 It verifies jwt token in the Http request and restricts page navigation\
+
+## Architecture Overview
+
+[Diagram](https://github.com/KOYAMANI/Kanamanabu/blob/main/docs/diagram.jpg)
