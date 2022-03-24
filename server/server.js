@@ -4,14 +4,17 @@ const { errorHandler, notFound } = require('./middlewares/errorMiddleware');
 const logger = require('./logger');
 const path = require('path');
 const cors = require('cors');
-const promClient = require('prom-client');
-const register = new promClient.Registry()
-const collectDefaultMetrics = promClient.collectDefaultMetrics;
 const userRoutes = require('./routes/userRoutes');
 const quizRoutes = require('./routes/quizRoutes');
 const chapterRoutes = require('./routes/chaptersRoute')
 const achievementRoutes = require('./routes/achievementRoutes');
 const dotenv = require('dotenv').config();
+
+const promClient = require('prom-client');
+const collectDefaultMetrics = promClient.collectDefaultMetrics;
+const register = new promClient.Registry();
+collectDefaultMetrics({ register });
+
 const app = express();
 dotenv.config;
 
@@ -43,9 +46,9 @@ app.use('/api/achievements', achievementRoutes)
 app.use('/api/chapters', chapterRoutes)
 
 // const end = histogram.startTimer();
-app.get('/metrics', (req, res) => {
-    res.set('Content-Type', promClient.register.contentType);
-    res.end(promClient.register.metrics());
+app.get('/metrics', async (req, res) => {
+    res.set('Content-Type', register.contentType);
+    res.end(await register.metrics());
     // end ({route, code: res.statusCode, method: req.method})
 });
 
