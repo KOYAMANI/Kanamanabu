@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "appmetrics-prometheus": "^3.1.0",
     "bcryptjs": "^2.4.3",
     "concurrently": "^6.4.0",
     "cors": "^2.8.5",
@@ -22,11 +23,12 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.2",
     "nodemon": "^2.0.15",
-    "update": "^0.4.2",
+    "update": "^0.7.4",
     "winston": "^3.6.0"
   },
   "devDependencies": {
     "jest": "^27.4.7",
+    "prom-client": "^14.0.1",
     "supertest": "^6.2.1"
   },
   "jest": {

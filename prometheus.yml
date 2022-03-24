@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 30s
+scrape_configs:
+  - job_name: kmb-app
+    static_configs:
+      - targets: ['kmb-server:8080', 'kmb-app:8080', 'localhost:8080']
