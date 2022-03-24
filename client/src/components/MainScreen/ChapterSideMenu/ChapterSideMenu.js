@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from "react-redux";
 import styles from "./ChaptertSideMenu.module.css";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const ChapterSideMenu =()=> {
 
     const chapter = useSelector(state => state.currentChapter);
