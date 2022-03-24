@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.fee6b377.css",
-    "main.js": "/static/js/main.b30e9e24.js",
+    "main.js": "/static/js/main.69d7429c.js",
     "static/js/787.070db070.chunk.js": "/static/js/787.070db070.chunk.js",
     "static/media/fuji.png": "/static/media/fuji.29c50714defb2e153afb.png",
     "static/media/fuji_bw.png": "/static/media/fuji_bw.504d48cd4574c783d182.png",
     "static/media/noprofileimage.png": "/static/media/noprofileimage.f4b7b33c415b11a7a660.png",
     "index.html": "/index.html",
     "main.fee6b377.css.map": "/static/css/main.fee6b377.css.map",
-    "main.b30e9e24.js.map": "/static/js/main.b30e9e24.js.map",
+    "main.69d7429c.js.map": "/static/js/main.69d7429c.js.map",
     "787.070db070.chunk.js.map": "/static/js/787.070db070.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fee6b377.css",
-    "static/js/main.b30e9e24.js"
+    "static/js/main.69d7429c.js"
   ]
 }
