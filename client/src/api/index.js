@@ -1,6 +1,10 @@
 import axios from 'axios';
 
-const baseURL = process.env.KMB_REACT_BASE_URL
+// Docker
+// const baseURL = process.env.KMB_REACT_BASE_URL
+
+// Heroku
+const baseURL = "http://localhost:8080/api"
 const api = axios.create({baseURL});
 
 export const getAchievements = config => api.get(`/achievements`, config);
