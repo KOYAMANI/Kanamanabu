@@ -1,4 +1,4 @@
-import { React, useEffect  } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Grid,} from "@material-ui/core";
 import { Card} from 'react-bootstrap';
@@ -36,8 +36,9 @@ const QuizScreen = () => {
 
     useEffect(() => {
         dispatch(fetchQuizList(category, subcategory));
-        if(!quizzes) history('/main')
-    }, [dispatch, category, subcategory, history, quizzes])
+        // Assume this line causes a bug that doesn't load the Quiz screen :(
+        // if(!quizzes) history('/main')
+    }, [dispatch, category, subcategory])
 
     const handleAnswerClick = (score, answer, correct) => {
         dispatch(updateScore(score, answer, correct))
@@ -46,8 +47,6 @@ const QuizScreen = () => {
     const handleNext = () => {
         dispatch(quizIndexIncrement(currentQuizIndex,quizzes.length))
     }
-
-    console.log(answerSelected)
 
     return (
         <QuizScreenMain>
