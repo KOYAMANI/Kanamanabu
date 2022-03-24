@@ -56,10 +56,6 @@ Open [http://localhost:80](http://localhost:80) to view it in your browser.
 
 [Documentation](https://github.com/KOYAMANI/Kanamanabu/blob/main/docs/data/data_types.md)
 
-## Architecture Overview
-
-[Diagram](https://github.com/KOYAMANI/Kanamanabu/blob/main/docs/diagram.jpg)
-
 ## How the App works
 
 ### State Management
