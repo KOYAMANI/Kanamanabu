@@ -36,8 +36,8 @@ const QuizScreen = () => {
 
     useEffect(() => {
         dispatch(fetchQuizList(category, subcategory));
-        if(!quizzes) history('/main')
-    }, [dispatch, category, subcategory, history, quizzes])
+        // if(!quizzes) history('/main')
+    }, [dispatch, category, subcategory])
 
     const handleAnswerClick = (score, answer, correct) => {
         dispatch(updateScore(score, answer, correct))
