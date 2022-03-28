@@ -7,16 +7,16 @@ import axios from 'axios';
 const baseURL = "http://localhost:8080/api"
 const api = axios.create({baseURL});
 
-export const getAchievements = config => api.get(`/achievements`, config);
-export const getChapters = title => api.get(`/chapters/${title}`);
-export const getCategories = () => api.get(`/quizzes/categories/`);
-export const getQuizList = (category, subcategory) => api.get(
+export const getAchievements = config => axios.get(`/achievements`, config);
+export const getChapters = title => axios.get(`/chapters/${title}`);
+export const getCategories = () => axios.get(`/quizzes/categories/`);
+export const getQuizList = (category, subcategory) => axios.get(
     `/quizzes/${category}/${subcategory}`);
-export const userLogin = (email, password, config) => api.post(
+export const userLogin = (email, password, config) => axios.post(
     '/users/login', { email, password }, config);
-export const userRegister = (name, pic, email, password, config) => api.post(
+export const userRegister = (name, pic, email, password, config) => axios.post(
     "/users", { name, pic, email, password }, config);
-export const userUpdate = (user, config) => api.post(
+export const userUpdate = (user, config) => axios.post(
     "/users/profile", user, config);
 
 const apis = {
