@@ -20,7 +20,6 @@ export const quizCategoryListReducer = (state={ categories: [] }, action) => {
             return { loading: false, categories: action.payload }
         case QUIZ_CATEGORY_LIST_FAIL:
             return { loading: false, error: action.payload}
-
         default:
             return state;
     }
