@@ -41,11 +41,6 @@ function RegisterForm(props) {
 
   }
 
-  // When you look at this code tomorrow
-  // Remember to include a click handler in the props for the button in slidecover
-  // That toggles the hidden state
-  // All parent containers need to update in mobile
-
     return (
       <div className={(props.visible ? "inline-grid" : "hidden") + " place-content-center lg:inline-grid w-full lg:w-1/2 h-4/5 bg-gray-100"}>
         <h1 className="m-2 lg:m-8 text-gray-800 absolute text-xl lg:text-2xl">Get Started</h1>
