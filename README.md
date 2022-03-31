@@ -80,3 +80,8 @@ It verifies jwt token in the Http request and restricts page navigation\
 ## Architecture Overview
 
 [Diagram](https://github.com/KOYAMANI/Kanamanabu/blob/main/docs/diagram.jpg)
+
+## Load test
+
+In server directly
+### `artillery run load-test.yaml`
