@@ -1,0 +1,59 @@
+config:
+  target: "http://localhost:8080"
+  phases:
+    - duration: 30
+      arrivalRate: 20
+      name: "Warming up"
+    - duration: 120
+      arrivalRate: 20
+      rampTo: 100
+      name: "Ramping up"
+  processor: "./config/processor.js"
+
+scenarios:
+  - name: "Initial route"
+    flow:
+      - get:
+          url: "/"
+  - name: "Sign up flow"
+    flow:
+      - get:
+          url: "/"
+      - post:
+          url: "/api/users/"
+          beforeRequest: generateSignup
+          json:
+            name: "{{ name }}"
+            email: "{{ email }}"
+            password: "{{ password }}"
+  - name: "Log in flow"
+    flow:
+      - get:
+          url: "/"
+      - post:
+          url: "/api/users/login"
+          beforeRequest: generateLogin
+          json:
+            email: "{{ email }}"
+            password: "{{ password }}"
+  - name: "Update profile"
+    flow:
+      - get:
+          url: "/"
+      - post:
+          url: "/api/users/profile"
+          beforeRequest: generateEmail
+          json:
+            email: "{{ email }}"
+  - name: "Fetch Quiz Chapters"
+    flow:
+      - get:
+          url: "/"
+      - get:
+          url: "/api/chapters/hiragana"
+  - name: "Fetch Quiz"
+    flow:
+      - get:
+          url: "/"
+      - get:
+          url: "/api/quizzes/hiragana/a"

@@ -26,6 +26,8 @@
     "winston": "^3.6.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^6.1.1",
+    "artillery": "^2.0.0-14",
     "jest": "^27.4.7",
     "supertest": "^6.2.1"
   },
