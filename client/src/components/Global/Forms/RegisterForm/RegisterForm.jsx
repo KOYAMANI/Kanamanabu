@@ -43,8 +43,11 @@ function RegisterForm(props) {
 
     return (
       <div className={(props.visible ? "inline-grid" : "hidden") + " place-content-center lg:inline-grid w-full lg:w-1/2 h-4/5 bg-gray-100"}>
+        <div className="w-full absolute bg-red-500 z-10 text-white p-1 truncate lg:w-1/2 empty:hidden py-2">{message}</div>
         <h1 className="m-2 lg:m-8 text-gray-800 absolute text-xl lg:text-2xl">Get Started</h1>
         <form onSubmit={submitHandler} className="grid gap-3">
+        {/* {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+        {message && <ErrorMessage variant="danger">{message}</ErrorMessage>} */}
           <Input
             placeholder="Username"
             type="name"
