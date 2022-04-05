@@ -27,3 +27,7 @@ yarn-error.log*
 
 .idea
 
+/server/config/dev.env
+/server/config/local.env
+/server/config/prod.env
+

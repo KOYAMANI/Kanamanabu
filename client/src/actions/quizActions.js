@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../api";
 import {
   QUIZ_LIST_FAIL,
   QUIZ_LIST_REQUEST,
@@ -22,7 +22,7 @@ export const fetchCategories = () => async(dispatch)=> {
       type: QUIZ_CATEGORY_LIST_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/quizzes/categories/`);
+    const { data } = await api.getCategories();
 
     dispatch({
       type: QUIZ_CATEGORY_LIST_SUCCESS,
@@ -47,7 +47,7 @@ export const fetchQuizList = (category, subcategory) => async (dispatch) => {
       type: QUIZ_LIST_REQUEST,
     });
 
-    const { data } = await axios.get(`/api/quizzes/${category}/${subcategory}`);
+    const { data } = await api.getQuizList(category, subcategory);
 
     // randomize quiz list before storing it to the state
     const randomize = (array) => {

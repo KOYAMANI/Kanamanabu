@@ -1,4 +1,4 @@
-  import axios from "axios";
+import api from "../api";
 
   import { 
       USER_LOGIN_FAIL, 
@@ -24,11 +24,8 @@
             },
         };
 
-        const { data } = await axios.post(
-            '/api/users/login', 
-            { email, password }, 
-            config
-        );
+        const { data } = await api.userLogin(
+            email,password,config)
 
         dispatch({type: USER_LOGIN_SUCCESS, payload: data});
 
@@ -59,12 +56,9 @@
           "Content-type": "application/json",
         },
       };
-  
-      const { data } = await axios.post(
-        "/api/users",
-        { name, pic, email, password },
-        config
-      );
+
+        const { data } = await api.userRegister(
+            name, pic, email, password, config);
   
       dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
   
@@ -96,9 +90,9 @@
           Authorization: `Bearer ${userInfo.token}`,
         },
       };
-  
-      const { data } = await axios.post("/api/users/profile", user, config);
-  
+
+      const { data } = await api.userUpdate(user, config);
+
       dispatch({ type: USER_UPDATE_SUCCESS, payload: data });
   
       dispatch({ type: USER_LOGIN_SUCCESS, payload: data });

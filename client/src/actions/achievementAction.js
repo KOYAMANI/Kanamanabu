@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../api";
 import {
     ACHIEVEMENT_LIST_FAIL,
     ACHIEVEMENT_LIST_REQUEST,
@@ -22,7 +22,7 @@ export const listAchievements = () => async (dispatch, getState) => {
             },
         };
 
-        const { data } = await axios.get(`/api/achievements`, config);
+        const { data } = await api.getAchievements(config);
 
         dispatch({
             type: ACHIEVEMENT_LIST_SUCCESS,

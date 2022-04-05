@@ -12,5 +12,9 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="@localhost" uuid="08d21082-7797-4e2c-be0f-c3c0e022ff05">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MONGO" exact-version="0" />
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

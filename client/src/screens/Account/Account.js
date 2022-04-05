@@ -6,7 +6,7 @@ import {
 } from "react-redux";
 import { Container } from 'react-bootstrap';
 import { AccountHeading } from './Account.styles';
-import { Card, Col } from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
 import {listAchievements} from "../../actions/achievementAction";
 
 
@@ -14,7 +14,7 @@ const Account = () => {
     const dispatch = useDispatch();
 
     const achievementList = useSelector(state => state.achievementList);
-    const { loading, achievements, error} = achievementList;
+    const { achievements } = achievementList;
 
     const userLogin = useSelector(state => state.userLogin);
     const { userInfo } = userLogin;

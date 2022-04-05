@@ -8,11 +8,13 @@ const achievementRoutes = require('./routes/achievementRoutes');
 const { errorHandler, notFound } = require('./middlewares/errorMiddleware');
 const logger = require('./logger');
 const path = require('path');
+const cors = require('cors');
 const app = express();
 dotenv.config;
 
 connectDB();
 app.use(express.json());
+app.use(cors());
 
 app.use('/api/users', userRoutes)
 app.use('/api/quizzes', quizRoutes)

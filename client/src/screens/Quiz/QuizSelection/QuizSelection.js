@@ -1,5 +1,5 @@
 
-import { React, useState, useEffect  } from "react";
+import { React, useEffect  } from "react";
 import { Container, Col} from 'react-bootstrap';
 import { useLocation, Link, useNavigate } from 'react-router-dom'
 import PrimalScreen from '../../../components/Global/Layouts/PrimalScreen'
