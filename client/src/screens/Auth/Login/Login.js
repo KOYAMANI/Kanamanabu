@@ -4,19 +4,11 @@ import { Link, useNavigate,} from "react-router-dom";
 import { login } from "../../../actions/userActions"
 import styles from "./Login.module.css";
 import wallpaper from "../../../assets/fuji_bw.png";
-
-import { Heading, LoginContainer } from './Login.styles'
-import OnboardingScreen from '../../../components/Global/Layouts/OnboardingScreen/OnboardingScreen'
 import Loading from "../../../components/Global/Loading/Loading";
 import ErrorMessage from "../../../components/Global/ErrorMessage/ErrorMessage";
-import { 
-  Form, 
-  Button, 
-  Row, 
-  Col } from "react-bootstrap";
 
 import LoginButton from "../../../components/HTMLInteracters/Button/Button";
-import Headingone from "../../../components/HTMLInteracters/Headingone/Headingone";
+import PrimaryHeading from "../../../components/HTMLInteracters/Heading/PrimaryHeading";
 
 const Login = () => {
 
@@ -55,7 +47,7 @@ const Login = () => {
           {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
           {loading && <Loading />}
 
-          <Headingone text="おかえりなさい"></Headingone>
+          <PrimaryHeading text="おかえりなさい"></PrimaryHeading>
           <form onSubmit={submitHandler} className={styles.loginForm}>
 
             <label>Email</label>
@@ -82,7 +74,7 @@ const Login = () => {
 
         </div>
         <div className={styles.registerDiv}>
-          <Headingone text="KanaManabu"></Headingone>
+          <PrimaryHeading text="KanaManabu"></PrimaryHeading>
             <p>
               Don't have an account? <Link to="/register">Register Here</Link>
             </p>

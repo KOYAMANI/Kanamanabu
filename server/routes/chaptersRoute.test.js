@@ -9,5 +9,4 @@ describe("GET /api/chapters", () =>{
         expect(res.statusCode).toBe(200)
     });
 
-
 })
