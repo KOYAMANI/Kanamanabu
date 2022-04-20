@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('./server')
+const app = require('../server')
 
 
 describe("POST /api/users", () =>{
@@ -112,35 +112,3 @@ describe("POST /api/users", () =>{
 
 })
 
-describe("GET /api/quizzes", () =>{
-
-    test("Fetch Quiz Category", async () => {
-        const res = await request(app).get("/api/quizzes/categories").send({
-        })
-        expect(res.statusCode).toBe(200)
-    });
-
-    test("Sort Quiz by Category", async () => {
-        const res = await request(app).get("/api/quizzes/hiragana").send({
-        })
-        expect(res.statusCode).toBe(200)
-    });
-
-    test("Sort Quiz by Category and SubCategory", async () => {
-        const res = await request(app).get("/api/quizzes/hiragana/a-group").send({
-        })
-        expect(res.statusCode).toBe(200)
-    });
-
-})
-
-describe("GET /api/chapters", () =>{
-
-    test("Get chapters by title", async () => {
-        const res = await request(app).get("/api/chapters/hiragana").send({
-        })
-        expect(res.statusCode).toBe(200)
-    });
-
-
-})
