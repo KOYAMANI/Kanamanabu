@@ -61,7 +61,7 @@ export const NavBar = () => {
                     <NavLink to='/editprofile'>Edit Profile</NavLink>
                 </MenuItem>
                 <NavDropdown.Divider />
-                <MenuItem onClick={logoutHandler}>
+                <MenuItem data-testid = "logout-button" onClick={logoutHandler}>
                     <NavLink to='/'>Log out</NavLink>
                 </MenuItem>
             </CustomNavDropdown>

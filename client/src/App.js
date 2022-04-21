@@ -26,8 +26,6 @@ const App = () =>(
       <Route path ='/main' element ={<MainScreen />} />
         <Route path ='/quizselection' element ={<QuizSelection />} />
       <Route path ='/quiz' element={<QuizScreen />} />
-
-
     </Routes>
     <Footer/>
   </BrowserRouter>
