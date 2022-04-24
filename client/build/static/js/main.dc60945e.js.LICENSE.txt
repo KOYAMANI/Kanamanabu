@@ -11,6 +11,16 @@ object-assign
 */
 
 /**
+ * @license React
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
  * A better abstraction over CSS.
  *
  * @copyright Oleg Isonen (Slobodskoi) / Isonen 2014-present
@@ -19,7 +29,7 @@ object-assign
  */
 
 /**
- * React Router DOM v6.1.1
+ * React Router DOM v6.2.2
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -30,7 +40,7 @@ object-assign
  */
 
 /**
- * React Router v6.1.1
+ * React Router v6.2.2
  *
  * Copyright (c) Remix Software Inc.
  *

@@ -41,13 +41,13 @@ const Login = () => {
                 className={styles.wallpaper}
                 src={wallpaper}
                 alt="Wallpaper"
-            ></img>
+            />
         <div className={styles.backDiv}>
         <div className={styles.loginDiv}>
           {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
           {loading && <Loading />}
 
-          <PrimaryHeading text="おかえりなさい"></PrimaryHeading>
+          <PrimaryHeading text="おかえりなさい" />
           <form onSubmit={submitHandler} className={styles.loginForm}>
 
             <label>Email</label>
@@ -66,7 +66,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
   
-            <LoginButton text="Login" type="submit"></LoginButton>
+            <LoginButton text="Login" type="submit" />
 
           </form>
 
@@ -74,7 +74,7 @@ const Login = () => {
 
         </div>
         <div className={styles.registerDiv}>
-          <PrimaryHeading text="KanaManabu"></PrimaryHeading>
+          <PrimaryHeading text="KanaManabu"/>
             <p>
               Don't have an account? <Link to="/register">Register Here</Link>
             </p>

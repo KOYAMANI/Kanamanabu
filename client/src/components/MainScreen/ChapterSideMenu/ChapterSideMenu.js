@@ -16,7 +16,7 @@ const ChapterSideMenu =()=> {
     }
 
     return (
-            <div className={styles.main}>
+            <main className={styles.main}>
                 {currentChapter?
                 (currentChapter[0].title === 'hiragana'
                 ||currentChapter[0].title === 'katakana')?
@@ -44,7 +44,7 @@ const ChapterSideMenu =()=> {
                         {currentChapter[0].title}
                     </div>
                 : 'no chapter'
-            }</div>
+            }</main>
         );
 }
 

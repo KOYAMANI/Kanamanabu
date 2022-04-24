@@ -27,6 +27,7 @@ const Account = () => {
 
 
     return (
+        <main>
         <PrimalScreen title = {`Welcome back ${userInfo.name}`}>
             <Container>
                 <AccountHeading>
@@ -39,18 +40,13 @@ const Account = () => {
 
                     <Col xs={12} md={6} lg={4} key={achievement._id}>
                         <h1>{achievement.title}</h1>
-                        {/*<Card style={{ width: '18rem' }}>*/}
-                        {/*    <Card.Img variant="top" src={achievement.imageUrl} />*/}
-                        {/*    <Card.Body>*/}
-                        {/*        <Card.Title>{achievement.title}</Card.Title>*/}
-                        {/*    </Card.Body>*/}
-                        {/*</Card>*/}
                     </Col>
                 )) } 
 
 
             </Container>
         </PrimalScreen>
+        </main>
     )
 } 
 

@@ -49,6 +49,7 @@ const QuizScreen = () => {
     }
 
     return (
+        <main>
         <QuizScreenMain>
             {error
                 && <ErrorMessage variant='danger'>
@@ -98,7 +99,7 @@ const QuizScreen = () => {
                             </Card.Body>
                         ):
                         <ErrorMessage variant='danger'>
-                            something went wrong :(
+                            <p className="text-black">something went wrong :(</p>
                         </ErrorMessage>
                     }
                     {answerSelected ? (
@@ -109,6 +110,7 @@ const QuizScreen = () => {
 
             }
         </QuizScreenMain>
+        </main>
     )
 }
 

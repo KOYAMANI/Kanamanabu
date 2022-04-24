@@ -11,7 +11,7 @@ const MainScreenLayout = ({children}) => {
     return (
         <MainScreenDiv>
             <Col>
-                {/*<h2>Choose a category and start learning !</h2>*/}
+                {/*<h1>Choose a category and start learning !</h1>*/}
                 <Row>
                     <ChapterSideMenu/>
                     {children}
