@@ -1,9 +1,17 @@
-import {render, screen} from '@testing-library/react';
-
+import {cleanup, render, screen} from '@testing-library/react';
 import TextInput from "./TextInput";
 import userEvent from "@testing-library/user-event";
+import ReactDOM from "react-dom";
+import renderer from "react-test-renderer";
+
+afterEach(cleanup);
 
 describe('TextInput form', () =>{
+    test('Render without crashing', ()=>{
+        const div = document.createElement('div')
+        ReactDOM.render(<TextInput placeholder="email" type="email"/>, div)
+    });
+
     test('render email input', ()=>{
         render(<TextInput placeholder="email" type="email"/>)
         const input = screen.getByPlaceholderText('email')
@@ -32,5 +40,10 @@ describe('TextInput form', () =>{
         userEvent.type(input, 'abc12345')
 
         expect(input).toHaveValue("abc12345");
+    });
+
+    test('match snapshot',()=>{
+        const tree = renderer.create(<TextInput placeholder="password" type="password"/>).toJSON();
+        expect(tree).toMatchSnapshot();
     })
 })

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage match snapshot 1`] = `
+<div
+  className="fade sc-bczRLJ knBbvx alert alert-info show"
+  role="alert"
+>
+  <strong>
+    test
+  </strong>
+</div>
+`;

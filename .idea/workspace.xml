@@ -5,30 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d6b4c8c-ea97-440b-a740-6261273686a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/models/chapterModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Global/Layouts/OnboardingScreen/OnboardingScreen.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Global/Layouts/PrimalScreen.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Global/Loading/Loading.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.fee6b377.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.fee6b377.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/787.070db070.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/787.070db070.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.ac50b51e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.ac50b51e.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.ac50b51e.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Global/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Global/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Badge/Badge.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Badge/Badge.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Global/ErrorMessage/ErrorMessage.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Global/ErrorMessage/ErrorMessage.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Global/Footer/Footer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Global/Footer/Footer.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Global/Forms/LoginForm/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Global/Forms/LoginForm/LoginForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Global/Forms/RegisterForm/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Global/Forms/RegisterForm/RegisterForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/MainScreen/ChapterSideMenu/ChapterSideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MainScreen/ChapterSideMenu/ChapterSideMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/MainScreen/Layout/MainScreenLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MainScreen/Layout/MainScreenLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/HTMLInteracters/Button/Button.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/HTMLInteracters/Button/Button.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/HTMLInteracters/Heading/PrimaryHeading.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/HTMLInteracters/Heading/PrimaryHeading.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/HTMLInteracters/TextInput/TextInput.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/HTMLInteracters/TextInput/TextInput.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/MainScreen/ChapterSelection/ChapterSelection.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MainScreen/ChapterSelection/ChapterSelection.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/screens/Account/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/screens/Account/Account.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/screens/Auth/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/screens/Auth/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/screens/Quiz/Quizzes/QuizScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/screens/Quiz/Quizzes/QuizScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/chaptersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/chaptersController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +41,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -73,45 +73,43 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Jest.ErrorMessage.Render text">
-    <configuration name="Badge" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.ErrorMessage (1)">
+    <configuration name="ChapterSelection" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$/client" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/client/src/components/Badge/Badge.test.js" />
-      <test-names>
-        <test-name value="Badge" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Button.Render text" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/client" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/client/src/components/HTMLInteracters/Button/Button.test.js" />
-      <test-names>
-        <test-name value="Button" />
-        <test-name value="Render text" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="ChapterSelection.ChapterSelection" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$/client" />
-      <envs />
-      <scope-kind value="TEST" />
+      <scope-kind value="SUITE" />
       <test-file value="$PROJECT_DIR$/client/src/components/MainScreen/ChapterSelection/ChapterSelection.test.js" />
       <test-names>
         <test-name value="ChapterSelection" />
-        <test-name value="ChapterSelection" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ErrorMessage (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/client" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/client/src/components/Global/Layouts/PrimalScreen.test.js" />
+      <test-names>
+        <test-name value="ErrorMessage" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ErrorMessage" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/client" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/client/src/components/Global/Layouts/OnboardingScreen/OnboardingScreen.test.js" />
+      <test-names>
+        <test-name value="ErrorMessage" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -122,34 +120,34 @@
       <working-dir value="$PROJECT_DIR$/client" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/client/src/components/Global/ErrorMessage/ErrorMessage.test.js" />
+      <test-file value="$PROJECT_DIR$/client/src/components/Global/Layouts/OnboardingScreen/OnboardingScreen.test.js" />
       <test-names>
         <test-name value="ErrorMessage" />
         <test-name value="Render text" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Footer.Render text" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="TextInput form.Render without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$/client" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/client/src/components/Global/Footer/Footer.test.js" />
+      <test-file value="$PROJECT_DIR$/client/src/components/HTMLInteracters/TextInput/TextInput.test.js" />
       <test-names>
-        <test-name value="Footer" />
-        <test-name value="Render text" />
+        <test-name value="TextInput form" />
+        <test-name value="Render without crashing" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.ErrorMessage (1)" />
+        <item itemvalue="Jest.ErrorMessage" />
         <item itemvalue="Jest.ErrorMessage.Render text" />
-        <item itemvalue="Jest.Footer.Render text" />
-        <item itemvalue="Jest.ChapterSelection.ChapterSelection" />
-        <item itemvalue="Jest.Button.Render text" />
-        <item itemvalue="Jest.Badge" />
+        <item itemvalue="Jest.ChapterSelection" />
+        <item itemvalue="Jest.TextInput form.Render without crashing" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +161,7 @@
       <updated>1650478069561</updated>
       <workItem from="1650478071404" duration="9913000" />
       <workItem from="1650807960990" duration="3371000" />
-      <workItem from="1650820345668" duration="3690000" />
+      <workItem from="1650820345668" duration="8303000" />
     </task>
     <servers />
   </component>

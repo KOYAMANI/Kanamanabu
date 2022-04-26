@@ -1,6 +1,9 @@
-import {render, screen} from '@testing-library/react';
-import React from 'react'
+import {render, screen, cleanup} from '@testing-library/react';
+import ReactDOM from "react-dom";
+import renderer from 'react-test-renderer'
 import ChapterSelection from "./ChapterSelection";
+
+afterEach(cleanup)
 
 const category =
     {
@@ -13,6 +16,10 @@ const category =
     }
 
 describe('ChapterSelection', ()=>{
+    test('Render without crashing', ()=>{
+        const div = document.createElement('div')
+        ReactDOM.render(<ChapterSelection category={category}/>, div)
+    });
 
     test('Render Title', ()=>{
         render(<ChapterSelection category={category}/>)
@@ -24,6 +31,11 @@ describe('ChapterSelection', ()=>{
         render(<ChapterSelection category={category}/>)
         const subTitle = screen.getByText('subTitle-test')
         expect(subTitle).toBeInTheDocument();
+    });
+
+    test('match snapshot',()=>{
+        const tree = renderer.create(<ChapterSelection category={category}/>).toJSON();
+        expect(tree).toMatchSnapshot();
     })
 
 })
