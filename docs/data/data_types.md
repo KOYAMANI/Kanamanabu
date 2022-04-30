@@ -71,11 +71,11 @@ A data model for user.
 }
 ```
 
-### Quiz Category
+### Chapter
 
 **About**
 
-A data model for Quiz Category.
+A data model for Learning Chapter.
 
 **Data example**
 ```javascript
