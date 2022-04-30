@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Achievement badge match snapshot 1`] = `
+<div
+  className="sc-bczRLJ dRMDrP"
+>
+  <div
+    className="sc-gsnTZi kVQEub spinner-border"
+    height={100}
+    width={100}
+  />
+</div>
+`;

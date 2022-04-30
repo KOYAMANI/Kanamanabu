@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fcb64f5-a8fa-4f20-a873-532d57275391" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/controllers/selectionsController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/data/mainMenuSelection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/selectionsRoute.js" afterDir="false" />
+    <list default="true" id="1d6b4c8c-ea97-440b-a740-6261273686a5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/client/src/actions/sideMenuActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/sideMenuActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Quiz/QuizCategory/QuizCategoryScreen/QuizCategoryScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Quiz/QuizCategory/QuizCategoryScreen/QuizCategoryScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SideMenu/SideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideMenu/SideMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/constants/sideMenuConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/sideMenuConstants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/sideMenuReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/sideMenuReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/screens/Quiz/QuizCategory/QuizCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/screens/Quiz/QuizCategory/QuizCategory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store.js" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
->>>>>>> main
+      <change beforePath="$PROJECT_DIR$/docs/data/data_types.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/data/data_types.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="frontend-unit-test" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -44,73 +36,119 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="JsBowerSettings">
-    <bower-package value="" />
-    <bower.json value="" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="23YkSAsJXkvC92qFDXzF3BMe5yX" />
+  <component name="ProjectId" id="284ZxsW4UWTMAHfiGg9OAT8cseb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mongo" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/client/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/src/components/EmptyMenu" />
-      <recent name="$PROJECT_DIR$/client/src/screens/Quiz/QuizCategory" />
-      <recent name="$PROJECT_DIR$/client/src/screens/Quiz/QuizSelection" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Node.js.Unnamed">
-    <configuration name="Unnamed" type="NodeJSConfigurationType" nameIsGenerated="true" working-dir="$PROJECT_DIR$/server">
-      <method v="2" />
-    </configuration>
-    <configuration name="run" type="js.build_tools.npm" nameIsGenerated="true">
-      <command value="run" />
-      <scripts />
+  <component name="RunManager" selected="Jest.ErrorMessage (1)">
+    <configuration name="ChapterSelection" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/client" />
       <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/client/src/components/MainScreen/ChapterSelection/ChapterSelection.test.js" />
+      <test-names>
+        <test-name value="ChapterSelection" />
+      </test-names>
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Node.js.Unnamed" />
-      <item itemvalue="npm.run" />
-    </list>
+    <configuration name="ErrorMessage (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/client" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/client/src/components/Global/Layouts/PrimalScreen.test.js" />
+      <test-names>
+        <test-name value="ErrorMessage" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ErrorMessage" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/client" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/client/src/components/Global/Layouts/OnboardingScreen/OnboardingScreen.test.js" />
+      <test-names>
+        <test-name value="ErrorMessage" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ErrorMessage.Render text" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/client" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/client/src/components/Global/Layouts/OnboardingScreen/OnboardingScreen.test.js" />
+      <test-names>
+        <test-name value="ErrorMessage" />
+        <test-name value="Render text" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="TextInput form.Render without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/client" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/client/src/components/HTMLInteracters/TextInput/TextInput.test.js" />
+      <test-names>
+        <test-name value="TextInput form" />
+        <test-name value="Render without crashing" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.ErrorMessage (1)" />
+        <item itemvalue="Jest.ErrorMessage" />
+        <item itemvalue="Jest.ErrorMessage.Render text" />
+        <item itemvalue="Jest.ChapterSelection" />
+        <item itemvalue="Jest.TextInput form.Render without crashing" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9fcb64f5-a8fa-4f20-a873-532d57275391" name="Changes" comment="" />
-      <created>1641918406615</created>
+      <changelist id="1d6b4c8c-ea97-440b-a740-6261273686a5" name="Changes" comment="" />
+      <created>1650478069561</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1641918406615</updated>
-      <workItem from="1641918408685" duration="260000" />
-      <workItem from="1641918689850" duration="1800000" />
-      <workItem from="1641922456093" duration="1131000" />
-      <workItem from="1641970961841" duration="2599000" />
-      <workItem from="1641974386935" duration="957000" />
-      <workItem from="1641975349007" duration="714000" />
-      <workItem from="1644940007253" duration="4013000" />
-      <workItem from="1645084077868" duration="5087000" />
+      <updated>1650478069561</updated>
+      <workItem from="1650478071404" duration="9913000" />
+      <workItem from="1650807960990" duration="3371000" />
+      <workItem from="1650820345668" duration="8984000" />
+      <workItem from="1651340919297" duration="1033000" />
     </task>
     <servers />
   </component>
@@ -122,14 +160,22 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/frontend-unit-test" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

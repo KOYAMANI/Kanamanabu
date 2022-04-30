@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChapterSelection match snapshot 1`] = `
+<div
+  background={
+    Array [
+      "h",
+      "t",
+      "t",
+      "p",
+      "s",
+      ":",
+      "/",
+      "/",
+      "g",
+      "o",
+      "o",
+      "g",
+      "l",
+      "e",
+      ".",
+      "c",
+      "o",
+      "m",
+    ]
+  }
+  className="MuiBox-root MuiBox-root-4 sc-bczRLJ ihOJYD"
+>
+  <div
+    className="col"
+  >
+    <p
+      className="sc-gsnTZi isGCWB"
+    >
+      subTitle-test
+    </p>
+    <p
+      className="sc-dkzDqf dOftdm"
+    >
+      title-test
+    </p>
+  </div>
+</div>
+`;

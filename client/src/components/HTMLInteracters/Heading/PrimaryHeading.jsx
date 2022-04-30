@@ -1,7 +1,6 @@
 import React from "react";
-import styles from "./Headingone.module.css";
 
-function Headingone(props) {
+function PrimaryHeading(props) {
 
     return (
         <h1 className="text-2xl">
@@ -10,4 +9,4 @@ function Headingone(props) {
     )
 }
 
-export default Headingone;
+export default PrimaryHeading;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage match snapshot 1`] = `
+<div
+  className="sc-bczRLJ iWdtwL"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="sc-hKMtZM nVtxo row"
+    >
+      <div
+        className="sc-gsnTZi bgSfay"
+      >
+        <h1
+          className="sc-dkzDqf dNCfZL"
+        >
+          onboarding-test
+        </h1>
+        <div
+          className="sc-jSMfEi RDsOs"
+        >
+          onboarding-child
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

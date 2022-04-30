@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const baseURL = process.env.KMB_REACT_BASE_URL
+const baseURL = "https://kanamanabu.herokuapp.com/api"
 
 // local "http://localhost:8080/api"
 // Heroku "https://kanamanabu.herokuapp.com/api"

@@ -4,7 +4,7 @@
 
 **About**
 
-A data model for quiz.
+A data model for quizzes.
 User gains score when selected item in`answers` is equals to `correct`
 
 **Data example**
@@ -37,7 +37,7 @@ User gains score when selected item in`answers` is equals to `correct`
 
 **About**
 
-A data model for user.
+A data model for a user.
 
 **Data example**
 ```javascript
@@ -71,11 +71,11 @@ A data model for user.
 }
 ```
 
-### Quiz Category
+### Chapter
 
 **About**
 
-A data model for Quiz Category.
+A data model for Learning Chapter contents.
 
 **Data example**
 ```javascript
@@ -107,7 +107,8 @@ A data model for Quiz Category.
 
 **About**
 
-A data model for Use Achievement.
+A data model for User Achievements 
+(e.g.; when a user got full score from vocabulary quiz, the user will get an achievement called "vocabulary master")
 
 **Data example**
 ```javascript

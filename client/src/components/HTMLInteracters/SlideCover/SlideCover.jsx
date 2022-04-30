@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
+import {
+    leftHeading,
+    leftSubheading,
+    leftSwitch,
+    leftSwitchButton,
+    rightSwitchButton,
+    rightSwitch,
+    rightSubheading,
+    rightHeading,} from '../../../constants/strings'
+
 function SlideCover(props) {
 
 const [left, setLeft] = useState(true);
-
-const leftHeading = "KanaManaBu";
-const leftSubheading = "For beginners and intermediates";
-const leftSwitch = "Already have an Account? ";
-const leftSwitchButton = "Log In";
-
-const rightHeading = "おかえりなさい";
-const rightSubheading = "Welcome back!";
-const rightSwitch = "Don't have an Account? ";
-const rightSwitchButton = "Register";
 
 const isVisible = props.visible;
 

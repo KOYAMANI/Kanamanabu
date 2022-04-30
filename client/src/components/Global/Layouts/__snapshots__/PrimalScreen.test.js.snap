@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage match snapshot 1`] = `
+<div
+  className="sc-bczRLJ cQsTxG"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="sc-dkzDqf bxnkfQ"
+      >
+        <div
+          className="sc-hKMtZM kmgeex"
+        >
+          primal-screen-test
+        </div>
+        <hr
+          className="sc-gsnTZi jwWTyC"
+        />
+        primal-screen-children
+      </div>
+    </div>
+  </div>
+</div>
+`;

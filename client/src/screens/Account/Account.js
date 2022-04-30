@@ -25,32 +25,23 @@ const Account = () => {
         dispatch(listAchievements());
     }, [dispatch])
 
-
     return (
+        <main>
         <PrimalScreen title = {`Welcome back ${userInfo.name}`}>
             <Container>
                 <AccountHeading>
                     Your achievements...
                 </AccountHeading>
-
                 {achievements?.map(achievement=>(                        
                     // TODO move below to the Badge Component
                     // <Badge key= {achievement._id} achievement={achievement}/>
-
                     <Col xs={12} md={6} lg={4} key={achievement._id}>
                         <h1>{achievement.title}</h1>
-                        {/*<Card style={{ width: '18rem' }}>*/}
-                        {/*    <Card.Img variant="top" src={achievement.imageUrl} />*/}
-                        {/*    <Card.Body>*/}
-                        {/*        <Card.Title>{achievement.title}</Card.Title>*/}
-                        {/*    </Card.Body>*/}
-                        {/*</Card>*/}
                     </Col>
                 )) } 
-
-
-            </Container>
+           </Container>
         </PrimalScreen>
+        </main>
     )
 } 
 
